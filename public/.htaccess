@@ -1,0 +1,2 @@
+# Serves the static export's own 404 page instead of Apache's default.
+ErrorDocument 404 /404.html

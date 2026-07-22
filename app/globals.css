@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #faf9f6;
+  --paper-raised: #f2f0ea;
+  --ink: #14161a;
+  --ink-muted: #5b5f66;
+  --accent: #1b2a44;
+  --accent-hover: #2a3d5f;
+  --line: #dad7ce;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-line: var(--line);
+  --font-serif: var(--font-newsreader);
+  --font-sans: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14161a;
+    --paper-raised: #1b1d22;
+    --ink: #f2f0ea;
+    --ink-muted: #a8abb2;
+    --accent: #9fb0cc;
+    --accent-hover: #c2cfe2;
+    --line: #33363d;
+  }
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.prose-measure {
+  max-width: 70ch;
+}
+
+/* Native <details> accordion chevron, rotated open state — no JS required */
+details.faq-item > summary {
+  list-style: none;
+}
+details.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+details.faq-item[open] > summary .faq-chevron {
+  transform: rotate(180deg);
+}
