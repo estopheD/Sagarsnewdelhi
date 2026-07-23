@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-line bg-paper-raised">
       <div className="mx-auto max-w-6xl px-6 py-14 sm:px-10">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <p className="font-serif text-lg text-ink">{firm.name}</p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-muted">
@@ -49,6 +49,21 @@ export function Footer() {
                   View all practice areas →
                 </Link>
               </li>
+            </ul>
+          </nav>
+
+          <nav aria-label="International">
+            <h2 className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
+              International
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm">
+              {footerSitemap.international.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-ink hover:text-accent">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 

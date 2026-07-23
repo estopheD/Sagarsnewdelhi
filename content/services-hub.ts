@@ -430,7 +430,7 @@ export const internationalServices = [
     ],
   },
   {
-    slug: "international-services-lpo",
+    slug: "lpo",
     title: "Legal Process Outsourcing (LPO)",
     description:
       "Structured, volume-based legal support delivered to foreign law firms and corporations. Contract and document review, legal research, due diligence support, litigation and discovery support, and AI-assisted legal review, delivered on defined process with quality control.",

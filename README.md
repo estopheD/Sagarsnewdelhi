@@ -37,6 +37,7 @@ app/                       Routes (App Router)
   about/[partner]/         Partner pages (scaffolded, empty until populated)
   contact/                 Contact + enquiry form
   insights/                Insights listing + [slug] post template
+  lpo/                     LPO & Cross-Border Legal Support (top-level nav item)
   practice-areas/[slug]/   Practice-area pages (scaffolded, empty until populated)
   sitemap.ts, robots.ts    Generated from actual routes + content registries
 
@@ -45,6 +46,7 @@ components/
   practice/                PracticeAreaLayout (full page) + PracticeAreaInterim /
                            PartnerInterim (shown until full content is added)
   contact/                 EnquiryForm — static, mailto-based (no backend)
+  lpo/                     ContactBar (top, above the fold), ContactBlock (foot of page)
   insights/                PostCard, PostLayout
   ui/                      FaqAccordion, SectionRule, JsonLd
 
@@ -52,6 +54,7 @@ content/                   All page copy and structured data (typed .ts files)
   site.ts                  Firm facts, offices, contact details
   services-hub.ts           Services Hub copy (verbatim)
   about.ts                  About page copy (verbatim)
+  lpo.ts                    LPO page copy (verbatim, from lpo-international-page.md)
   nav.ts                    Derived navigation / slug registries
   practice-areas/           Types + empty content registry (see below)
   partners/                 Types + empty content registry (see below)
@@ -185,12 +188,23 @@ rebuild from scratch. Ask if you want that path instead.
 - **Mumbai office email** (`navinarora21@gmail.com`) — reproduced as supplied
   in `about-and-partner-pages.md`; the source file itself flags this as
   possibly warranting a firm email address instead of a personal one.
+- **LPO WhatsApp/mobile number discrepancy** — `lpo-international-page.md`
+  §C.3 flags that the firm's LPO profile lists WhatsApp as `9710021846`
+  elsewhere, while this page's build instructions specify `9810021846`
+  throughout. The page uses `9810021846` (`content/lpo.ts`,
+  `partnerPhoneTel`/`whatsappHref`) per the explicit instruction. Confirm
+  which number is correct, and update `content/lpo.ts` if `9710021846` is
+  the live line.
+- **`sagarandsagar@lawoffices.co.in`** — used on the LPO page as supplied in
+  the source file; the source file separately suggests a single dedicated
+  `lpo@`-style address might present better to overseas clients (§C.7 of
+  `lpo-international-page.md`). Not changed without instruction.
 - **Logo / favicon** — the site currently uses the default Next.js favicon
   placeholder at `app/favicon.ico`.
-- **`/sectors`, `/international-services`, `/international-services-lpo`** —
-  linked from the Services Hub (per the source content) but their page
-  bodies are out of scope for this build and not yet created; the links will
-  404 until those routes are built.
+- **`/sectors`, `/international-services`** — linked from the Services Hub
+  (per the source content) but their page bodies are out of scope for this
+  build and not yet created; the links will 404 until those routes are
+  built. (`/lpo`, the third link in that group, is now built in full.)
 
 ## Design tokens
 

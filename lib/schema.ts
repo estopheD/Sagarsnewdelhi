@@ -150,6 +150,29 @@ export function localBusinessSchema() {
   };
 }
 
+export function lpoServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Legal Process Outsourcing",
+    name: "Legal Process Outsourcing & Cross-Border Legal Support",
+    url: `${SITE_URL}/lpo`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: ["US", "GB", "CA", "AU", "SG", "AE", "IN"],
+  };
+}
+
+export function lpoContactPointSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    telephone: "+91-98100-21846",
+    contactType: "customer support",
+    availableLanguage: "English",
+    areaServed: ["US", "GB", "CA", "AU", "SG", "AE"],
+  };
+}
+
 export function blogPostingSchema(post: {
   title: string;
   description: string;

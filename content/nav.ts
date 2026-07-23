@@ -1,8 +1,11 @@
 import { groups as practiceGroups } from "./services-hub";
 
+// Order per lpo-international-page.md §B.1: Home · About · Our Practice ·
+// LPO · Insights · Contact (Home is the logo link, rendered separately).
 export const primaryNav = [
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "LPO", href: "/lpo" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -32,8 +35,8 @@ export const footerSitemap = {
     { label: "Contact", href: "/contact" },
   ],
   international: [
+    { label: "Legal Process Outsourcing (LPO)", href: "/lpo" },
     { label: "International Services — India Desk", href: "/international-services" },
-    { label: "Legal Process Outsourcing (LPO)", href: "/international-services-lpo" },
     { label: "Sectors We Serve", href: "/sectors" },
   ],
 };
