@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PostLayout } from "@/components/insights/PostLayout";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { getAllInsights, getInsight } from "@/lib/insights";
-import { blogPostingSchema, breadcrumbListSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
 import { firm } from "@/content/site";
 
 type Params = { slug: string };
@@ -24,6 +24,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} | ${firm.name}`,
     description: post.description,
+    keywords: post.keywords,
     alternates: { canonical: `/insights/${slug}` },
     openGraph: {
       title: post.title,
@@ -31,6 +32,7 @@ export async function generateMetadata({
       url: `/insights/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt ?? post.publishedAt,
     },
   };
 }
@@ -52,7 +54,10 @@ export default async function InsightPostPage({
           description: post.description,
           slug: post.slug,
           publishedAt: post.publishedAt,
+          updatedAt: post.updatedAt,
           author: post.author,
+          category: post.category,
+          keywords: post.keywords,
         })}
       />
       <JsonLd
@@ -62,6 +67,7 @@ export default async function InsightPostPage({
           { name: post.title, path: `/insights/${slug}` },
         ])}
       />
+      {post.faqs && post.faqs.length > 0 && <JsonLd data={faqPageSchema(post.faqs)} />}
       <PostLayout post={post} />
     </>
   );

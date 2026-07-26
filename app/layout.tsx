@@ -3,7 +3,7 @@ import { Newsreader, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { DisclaimerModal } from "@/components/layout/DisclaimerModal";
+import { DisclaimerBanner } from "@/components/layout/DisclaimerBanner";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, firm } from "@/content/site";
@@ -58,7 +58,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <DisclaimerModal />
+        <DisclaimerBanner />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

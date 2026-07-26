@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { footerSitemap, practiceAreaLinks } from "@/content/nav";
-import { firm, offices, contact, disclaimerPlaceholder } from "@/content/site";
+import { firm, offices, contact, disclaimer } from "@/content/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -93,9 +93,15 @@ export function Footer() {
           </p>
         </div>
 
-        <p className="prose-measure mt-6 text-xs leading-relaxed text-ink-muted">
-          {disclaimerPlaceholder}
-        </p>
+        <div id="disclaimer" className="prose-measure mt-6 scroll-mt-24 text-xs leading-relaxed text-ink-muted">
+          <p className="text-ink">Disclaimer</p>
+          <p className="mt-2">{disclaimer.intro}</p>
+          <ul className="mt-2 list-disc space-y-1.5 pl-5">
+            {disclaimer.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );

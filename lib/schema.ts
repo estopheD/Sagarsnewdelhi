@@ -178,21 +178,33 @@ export function blogPostingSchema(post: {
   description: string;
   slug: string;
   publishedAt: string;
+  updatedAt?: string;
   author: string;
+  category?: string;
+  keywords?: string[];
 }) {
+  const url = absoluteUrl(`/insights/${post.slug}`);
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    url: absoluteUrl(`/insights/${post.slug}`),
+    url,
     datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: post.author,
+      url: SITE_URL,
     },
     publisher: {
       "@id": `${SITE_URL}/#organization`,
     },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    ...(post.category ? { articleSection: post.category } : {}),
+    ...(post.keywords ? { keywords: post.keywords.join(", ") } : {}),
   };
 }

@@ -14,6 +14,8 @@ export function PostCard({ post }: { post: InsightSummary }) {
   return (
     <article className="border-b border-line py-8 first:pt-0 last:border-b-0">
       <p className="text-xs uppercase tracking-wide text-ink-muted">
+        <span className="text-accent">{post.category}</span>
+        {" · "}
         <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
         {post.placeholder && (
           <span className="ml-2 text-accent">Placeholder</span>
@@ -25,7 +27,7 @@ export function PostCard({ post }: { post: InsightSummary }) {
         </Link>
       </h3>
       <p className="prose-measure mt-3 text-sm leading-relaxed text-ink-muted">
-        {post.description}
+        {post.excerpt}
       </p>
       <Link
         href={`/insights/${post.slug}`}

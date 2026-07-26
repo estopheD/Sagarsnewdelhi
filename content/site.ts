@@ -88,6 +88,18 @@ export const forums = [
   "District Courts and Commercial Courts across India",
 ];
 
-// Placeholder — final wording to be supplied by the firm. Do not fabricate.
-export const disclaimerPlaceholder =
-  "FIRM TO SUPPLY FINAL DISCLAIMER WORDING. This website is for general information only, does not constitute legal advice, and does not create an advocate–client relationship.";
+// Final wording supplied by the firm. Rendered in full in the Footer, and
+// summarised in the entry DisclaimerBanner (see components/layout).
+export const disclaimer = {
+  intro:
+    "As per the rules of the Bar Council of India, advocates are not permitted to solicit work or advertise. By accessing this website, you acknowledge and confirm the following:",
+  points: [
+    "There has been no advertisement, personal communication, solicitation, invitation, or inducement of any kind whatsoever from Sagar & Sagar Law Offices or any of its members to solicit any work through this website.",
+    "You wish to gain more information about Sagar & Sagar Law Offices for your own information and use.",
+    "The information about Sagar & Sagar Law Offices is provided to you on your specific request, and any information obtained or materials downloaded from this website are completely at your own volition; any transmission, receipt, or use of this website does not create any lawyer-client relationship.",
+    "Sagar & Sagar Law Offices is not liable for any consequence of any action taken by you relying on the material or information provided on this website.",
+    "This website is meant only for providing information and does not purport to be exhaustive or intended as legal advice for any specific case or individual.",
+  ],
+  bannerSummary:
+    "This website does not advertise or solicit work, consistent with the Bar Council of India's rules for advocates. Continued use confirms you are seeking this information at your own request and that it does not create a lawyer–client relationship.",
+} as const;
