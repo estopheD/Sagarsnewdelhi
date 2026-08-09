@@ -21,13 +21,15 @@ export async function generateMetadata({
   const post = getInsight(slug);
   if (!post) return {};
 
+  const metaTitle = post.metaTitle ?? post.title;
+
   return {
-    title: `${post.title} | ${firm.name}`,
+    title: `${metaTitle} | ${firm.name}`,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `/insights/${slug}` },
     openGraph: {
-      title: post.title,
+      title: metaTitle,
       description: post.description,
       url: `/insights/${slug}`,
       type: "article",
@@ -58,6 +60,7 @@ export default async function InsightPostPage({
           author: post.author,
           category: post.category,
           keywords: post.keywords,
+          wordCount: post.wordCount,
         })}
       />
       <JsonLd

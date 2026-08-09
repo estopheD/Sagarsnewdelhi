@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const latestPosts = getAllInsights().slice(0, 3);
+  const latestPosts = getAllInsights().slice(0, 4);
 
   return (
     <>

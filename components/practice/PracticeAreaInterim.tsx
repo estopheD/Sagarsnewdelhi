@@ -2,13 +2,20 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionRule } from "@/components/ui/SectionRule";
 import type { PracticeGroup } from "@/content/services-hub";
+import type { InsightSummary } from "@/lib/insights";
 
 // Shown at a practice-area's permanent URL before its full 12-section page
 // is written. Static export requires every listed slug to resolve to a real
 // page (an empty dynamic route fails the build), so rather than 404 until
 // the full page exists, this reuses the group's own already-approved
 // Services Hub summary — no new copy is authored here.
-export function PracticeAreaInterim({ group }: { group: PracticeGroup }) {
+export function PracticeAreaInterim({
+  group,
+  relatedInsights = [],
+}: {
+  group: PracticeGroup;
+  relatedInsights?: InsightSummary[];
+}) {
   return (
     <>
       <Breadcrumbs
@@ -44,6 +51,29 @@ export function PracticeAreaInterim({ group }: { group: PracticeGroup }) {
           </Link>{" "}
           page.
         </p>
+
+        {relatedInsights.length > 0 && (
+          <>
+            <SectionRule className="my-14" />
+            <section aria-labelledby="related-insights-heading">
+              <h2 id="related-insights-heading" className="font-serif text-2xl text-ink">
+                Related Insights
+              </h2>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {relatedInsights.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/insights/${post.slug}`}
+                      className="text-ink underline decoration-line underline-offset-4 hover:text-accent"
+                    >
+                      {post.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
       </article>
     </>
   );

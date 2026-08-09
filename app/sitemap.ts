@@ -35,9 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const insightRoutes: MetadataRoute.Sitemap = getAllInsights().map((post) => ({
     url: `${SITE_URL}/insights/${post.slug}`,
-    lastModified: post.publishedAt,
+    lastModified: post.updatedAt ?? post.publishedAt,
     changeFrequency: "yearly",
-    priority: 0.5,
+    priority: post.priority ?? 0.5,
   }));
 
   return [...staticRoutes, ...practiceAreaRoutes, ...partnerRoutes, ...insightRoutes];

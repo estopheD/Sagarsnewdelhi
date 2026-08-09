@@ -1,6 +1,9 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { TableOfContents } from "@/components/insights/TableOfContents";
 import type { InsightPost } from "@/lib/insights";
 
 function formatDate(iso: string) {
@@ -12,12 +15,22 @@ function formatDate(iso: string) {
   });
 }
 
+const mdxOptions = {
+  mdxOptions: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug],
+  },
+};
+
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => (
     <h2 className="mt-12 font-serif text-2xl text-ink" {...props} />
   ),
+  // Used by long-form reference posts for their numbered top-level
+  // sections (e.g. "I. What the Code was built to do"), which is what
+  // TableOfContents links to — so it gets the same visual weight as h2.
   h3: (props: React.ComponentProps<"h3">) => (
-    <h3 className="mt-8 font-serif text-xl text-ink" {...props} />
+    <h3 className="mt-12 scroll-mt-8 font-serif text-2xl text-ink" {...props} />
   ),
   p: (props: React.ComponentProps<"p">) => (
     <p className="mt-5 leading-relaxed text-ink" {...props} />
@@ -34,9 +47,41 @@ const mdxComponents = {
       {...props}
     />
   ),
+  table: (props: React.ComponentProps<"table">) => (
+    <div className="mt-6 overflow-x-auto">
+      <table className="w-full border-collapse text-left text-sm" {...props} />
+    </div>
+  ),
+  thead: (props: React.ComponentProps<"thead">) => (
+    <thead className="border-b border-line text-ink" {...props} />
+  ),
+  tbody: (props: React.ComponentProps<"tbody">) => (
+    <tbody className="divide-y divide-line text-ink-muted" {...props} />
+  ),
+  th: (props: React.ComponentProps<"th">) => (
+    <th scope="col" className="py-2 pr-6 font-serif font-normal text-ink" {...props} />
+  ),
+  td: (props: React.ComponentProps<"td">) => <td className="py-2 pr-6" {...props} />,
 };
 
 export function PostLayout({ post }: { post: InsightPost }) {
+  const hasToc = post.toc.length > 0;
+
+  const body = (
+    <div className="prose-measure">
+      <MDXRemote source={post.content} components={mdxComponents} options={mdxOptions} />
+
+      {post.faqs && post.faqs.length > 0 && (
+        <div className="mt-14">
+          <h2 className="font-serif text-2xl text-ink">FAQ</h2>
+          <div className="mt-6">
+            <FaqAccordion items={post.faqs} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <>
       <Breadcrumbs
@@ -68,17 +113,13 @@ export function PostLayout({ post }: { post: InsightPost }) {
           </p>
         </header>
 
-        <div className="prose-measure mt-10">
-          <MDXRemote source={post.content} components={mdxComponents} />
-        </div>
-
-        {post.faqs && post.faqs.length > 0 && (
-          <div className="prose-measure mt-14">
-            <h2 className="font-serif text-2xl text-ink">FAQ</h2>
-            <div className="mt-6">
-              <FaqAccordion items={post.faqs} />
-            </div>
+        {hasToc ? (
+          <div className="mt-10 lg:grid lg:grid-cols-[240px_1fr] lg:items-start lg:gap-12">
+            <TableOfContents items={post.toc} />
+            {body}
           </div>
+        ) : (
+          <div className="mt-10">{body}</div>
         )}
       </article>
     </>

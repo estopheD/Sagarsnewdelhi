@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { practiceAreaContent } from "@/content/practice-areas/index";
 import { groups } from "@/content/services-hub";
 import { faqPageSchema, breadcrumbListSchema } from "@/lib/schema";
+import { getInsightsLinkingToPracticeArea } from "@/lib/insights";
 
 type Params = { slug: string };
 
@@ -59,6 +60,7 @@ export default async function PracticeAreaPage({
 }) {
   const { slug } = await params;
   const content = practiceAreaContent[slug];
+  const relatedInsights = getInsightsLinkingToPracticeArea(slug);
 
   if (content) {
     return (
@@ -80,7 +82,7 @@ export default async function PracticeAreaPage({
             { name: content.breadcrumbLabel, path: `/practice-areas/${slug}` },
           ])}
         />
-        <PracticeAreaLayout content={content} />
+        <PracticeAreaLayout content={content} relatedInsights={relatedInsights} />
       </>
     );
   }
@@ -97,7 +99,7 @@ export default async function PracticeAreaPage({
           { name: group.title, path: `/practice-areas/${slug}` },
         ])}
       />
-      <PracticeAreaInterim group={group} />
+      <PracticeAreaInterim group={group} relatedInsights={relatedInsights} />
     </>
   );
 }

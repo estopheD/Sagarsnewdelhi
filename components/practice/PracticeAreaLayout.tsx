@@ -4,13 +4,20 @@ import { SectionRule } from "@/components/ui/SectionRule";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { practiceAreaLinks } from "@/content/nav";
 import type { PracticeAreaContent } from "@/content/practice-areas/types";
+import type { InsightSummary } from "@/lib/insights";
 
 // Shared template for all 17 practice-area pages, matching the 12-section
 // structure in SAGAR_AND_SAGAR_WEBSITE_CONTENT.md §0.11. Content is passed
 // in fully typed; this component only handles layout, so dropping a new
 // PracticeAreaContent entry into content/practice-areas/index.ts is enough
 // to publish a page — no layout changes required.
-export function PracticeAreaLayout({ content }: { content: PracticeAreaContent }) {
+export function PracticeAreaLayout({
+  content,
+  relatedInsights = [],
+}: {
+  content: PracticeAreaContent;
+  relatedInsights?: InsightSummary[];
+}) {
   const related = practiceAreaLinks.filter((link) =>
     content.relatedPracticeAreas.includes(link.slug)
   );
@@ -159,6 +166,29 @@ export function PracticeAreaLayout({ content }: { content: PracticeAreaContent }
                       className="text-ink underline decoration-line underline-offset-4 hover:text-accent"
                     >
                       {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
+
+        {relatedInsights.length > 0 && (
+          <>
+            <SectionRule className="my-14" />
+            <section aria-labelledby="related-insights-heading">
+              <h2 id="related-insights-heading" className="font-serif text-2xl text-ink">
+                Related Insights
+              </h2>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {relatedInsights.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/insights/${post.slug}`}
+                      className="text-ink underline decoration-line underline-offset-4 hover:text-accent"
+                    >
+                      {post.title}
                     </Link>
                   </li>
                 ))}

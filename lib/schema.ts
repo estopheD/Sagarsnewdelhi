@@ -182,6 +182,7 @@ export function blogPostingSchema(post: {
   author: string;
   category?: string;
   keywords?: string[];
+  wordCount?: number;
 }) {
   const url = absoluteUrl(`/insights/${post.slug}`);
   return {
@@ -206,5 +207,6 @@ export function blogPostingSchema(post: {
     },
     ...(post.category ? { articleSection: post.category } : {}),
     ...(post.keywords ? { keywords: post.keywords.join(", ") } : {}),
+    ...(post.wordCount ? { wordCount: post.wordCount } : {}),
   };
 }
