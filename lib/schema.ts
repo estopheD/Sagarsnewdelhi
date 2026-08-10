@@ -150,6 +150,23 @@ export function localBusinessSchema() {
   };
 }
 
+export function practiceAreaServiceSchema(content: {
+  slug: string;
+  h1: string;
+  serviceType: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "@id": `${SITE_URL}/practice-areas/${content.slug}#service`,
+    name: content.h1,
+    serviceType: content.serviceType,
+    url: `${SITE_URL}/practice-areas/${content.slug}`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "IN",
+  };
+}
+
 export function lpoServiceSchema() {
   return {
     "@context": "https://schema.org",

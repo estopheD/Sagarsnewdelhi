@@ -25,6 +25,9 @@ export type PracticeAreaContent = {
     primaryKeyword: string;
     secondaryKeywords: string[];
   };
+  // schema.org Service.serviceType — the practice area's canonical service
+  // name, per the source content file's own "Schema notes" section.
+  serviceType: string;
   h1: string;
   answerFirst: string;
   overview: string[];

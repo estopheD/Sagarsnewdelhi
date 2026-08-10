@@ -5,7 +5,7 @@ import { PracticeAreaInterim } from "@/components/practice/PracticeAreaInterim";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { practiceAreaContent } from "@/content/practice-areas/index";
 import { groups } from "@/content/services-hub";
-import { faqPageSchema, breadcrumbListSchema } from "@/lib/schema";
+import { faqPageSchema, breadcrumbListSchema, practiceAreaServiceSchema } from "@/lib/schema";
 import { getInsightsLinkingToPracticeArea } from "@/lib/insights";
 
 type Params = { slug: string };
@@ -74,6 +74,7 @@ export default async function PracticeAreaPage({
             about: content.seo.primaryKeyword,
           }}
         />
+        <JsonLd data={practiceAreaServiceSchema(content)} />
         <JsonLd data={faqPageSchema(content.faqs)} />
         <JsonLd
           data={breadcrumbListSchema([
