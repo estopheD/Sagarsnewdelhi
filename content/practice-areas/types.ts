@@ -10,6 +10,14 @@ export type ScopeGroup = {
   heading: string;
   intro: string;
   items: string[];
+  // Optional trailing note with a single embedded link, e.g. a cross-link
+  // to another page describing the delivery model for this scope of work.
+  note?: {
+    prefix: string;
+    linkText: string;
+    href: string;
+    suffix: string;
+  };
 };
 
 export type Faq = {

@@ -3,8 +3,17 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionRule } from "@/components/ui/SectionRule";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { practiceAreaLinks } from "@/content/nav";
+import { internationalServices } from "@/content/services-hub";
 import type { PracticeAreaContent } from "@/content/practice-areas/types";
 import type { InsightSummary } from "@/lib/insights";
+
+// LPO is not one of the 16 practice-area groups (it lives at /lpo, not
+// /practice-areas/lpo), so it isn't in practiceAreaLinks. Pages that
+// cross-reference it in relatedPracticeAreas (e.g. Intellectual Property)
+// need it resolved separately, to the page that's actually live.
+const crossClusterLinks = internationalServices
+  .filter((s) => s.slug === "lpo")
+  .map((s) => ({ title: s.title, slug: s.slug, href: "/lpo" }));
 
 // Shared template for all 17 practice-area pages, matching the 12-section
 // structure in SAGAR_AND_SAGAR_WEBSITE_CONTENT.md §0.11. Content is passed
@@ -18,7 +27,7 @@ export function PracticeAreaLayout({
   content: PracticeAreaContent;
   relatedInsights?: InsightSummary[];
 }) {
-  const related = practiceAreaLinks.filter((link) =>
+  const related = [...practiceAreaLinks, ...crossClusterLinks].filter((link) =>
     content.relatedPracticeAreas.includes(link.slug)
   );
 
@@ -81,6 +90,18 @@ export function PracticeAreaLayout({
                     </li>
                   ))}
                 </ul>
+                {group.note && (
+                  <p className="prose-measure mt-4 text-sm leading-relaxed text-ink-muted">
+                    {group.note.prefix}
+                    <Link
+                      href={group.note.href}
+                      className="text-accent hover:text-accent-hover"
+                    >
+                      {group.note.linkText}
+                    </Link>
+                    {group.note.suffix}
+                  </p>
+                )}
               </div>
             ))}
           </div>
