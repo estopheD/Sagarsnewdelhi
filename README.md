@@ -178,13 +178,10 @@ rebuild from scratch. Ask if you want that path instead.
   Hostinger" above), or accept wiring the form to a third-party form
   backend (e.g. Formspree) — a deliberate choice to make, not done by
   default.
-- **Aerospace & Defence practice page** — present in the source content file
-  but held back pending Senior Partner confirmation that the firm undertakes
-  this work (see the note at that section of
-  `SAGAR_AND_SAGAR_WEBSITE_CONTENT.md`). Its data is kept, unused, in
-  `content/services-hub.ts` as `aerospaceDefencePendingConfirmation`; append
-  it to the `groups` array and add its slug to the practice-area registry
-  once confirmed.
+- **Aerospace & Defence practice page** — was held back pending Senior Partner
+  confirmation that the firm undertakes this work; confirmed, and published
+  as group XVII in `content/services-hub.ts` and as a full page in
+  `content/practice-areas/index.ts`.
 - **Mumbai office email** (`navinarora21@gmail.com`) — reproduced as supplied
   in `about-and-partner-pages.md`; the source file itself flags this as
   possibly warranting a firm email address instead of a personal one.

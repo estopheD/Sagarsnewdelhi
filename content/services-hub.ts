@@ -1,11 +1,9 @@
 // Verbatim content for the Services Hub page (/services), transcribed from
 // SAGAR_AND_SAGAR_WEBSITE_CONTENT.md, Part 1. Do not rewrite or paraphrase.
 //
-// Practice area group XVII (Aerospace & Defence) is present in the source
-// file but its data is intentionally NOT included in `groups` below and is
-// excluded from navigation, per the source file's own note at that section:
-// "Publication of this page is subject to Senior Partner confirmation that
-// the firm undertakes this work." If confirmed, add it back as group 17.
+// Practice area group XVII (Aerospace & Defence) was held back pending
+// Senior Partner confirmation that the firm undertakes this work —
+// confirmed, and included in `groups` below as of the Batch 7 content.
 
 export type PracticeGroup = {
   numeral: string;
@@ -387,32 +385,28 @@ export const groups: PracticeGroup[] = [
       "Philanthropy and charitable structures",
     ],
   },
+  {
+    numeral: "XVII",
+    slug: "aerospace-defence-regulatory-advisory",
+    title: "Aerospace & Defence — Regulatory & Advisory",
+    description:
+      "The regulatory framework applicable to defence procurement and production, aviation operations, and the movement of controlled goods and technology. The firm advises on acquisition and offsets, industrial licensing, export control and aviation regulation, and acts in disputes with public sector purchasers. Work in this area is regulatory, contractual and advisory in nature.",
+    serviceLines: [
+      "Defence procurement and acquisition",
+      "Offsets and indigenisation",
+      "Industrial licensing and arms rules",
+      "Foreign investment in defence",
+      "Export controls and SCOMET",
+      "Industrial collaboration and technology transfer",
+      "Civil aviation regulation",
+      "Aircraft acquisition, leasing and financing",
+      "Unmanned aircraft (drone) regulation",
+      "Space sector regulatory advisory",
+      "Disputes with public sector purchasers",
+      "Blacklisting and debarment challenges",
+    ],
+  },
 ];
-
-// Group XVII — Aerospace & Defence — Regulatory & Advisory — held back pending
-// Senior Partner confirmation. Kept here (unused) so it can be appended to
-// `groups` the moment the firm confirms this line of work.
-export const aerospaceDefencePendingConfirmation: PracticeGroup = {
-  numeral: "XVII",
-  slug: "aerospace-defence-regulatory-advisory",
-  title: "Aerospace & Defence — Regulatory & Advisory",
-  description:
-    "The regulatory framework applicable to defence procurement and production, aviation operations, and the movement of controlled goods and technology. The firm advises on acquisition and offsets, industrial licensing, export control and aviation regulation, and acts in disputes with public sector purchasers. Work in this area is regulatory, contractual and advisory in nature.",
-  serviceLines: [
-    "Defence procurement and acquisition",
-    "Offsets and indigenisation",
-    "Industrial licensing and arms rules",
-    "Foreign investment in defence",
-    "Export controls and SCOMET",
-    "Industrial collaboration and technology transfer",
-    "Civil aviation regulation",
-    "Aircraft acquisition, leasing and financing",
-    "Unmanned aircraft (drone) regulation",
-    "Space sector regulatory advisory",
-    "Disputes with public sector purchasers",
-    "Blacklisting and debarment challenges",
-  ],
-};
 
 export const internationalServices = [
   {

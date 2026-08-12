@@ -1351,12 +1351,15 @@ export const practiceAreaContent: Record<string, PracticeAreaContent> = {
       },
       {
         heading: "Environmental, social and governance obligations",
-        intro: "Reporting and governance requirements applicable to larger and listed entities.",
-        items: [
-          "Advice on sustainability reporting requirements applicable to listed entities",
-          "Advice on governance requirements and board-level responsibility for compliance",
-          "Advice on the interaction between voluntary commitments and enforceable obligations",
-        ],
+        intro: "",
+        items: [],
+        note: {
+          prefix: "",
+          linkText: "ESG & Sustainability",
+          href: "/practice-areas/esg-sustainability",
+          suffix:
+            " covers sustainability reporting, corporate social responsibility, environmental compliance and governance obligations in detail.",
+        },
       },
     ],
     forums: [
@@ -2212,5 +2215,1700 @@ export const practiceAreaContent: Record<string, PracticeAreaContent> = {
       "lpo",
     ],
     breadcrumbLabel: "Intellectual Property",
+  },
+
+  "tax-advisory-litigation": {
+    slug: "tax-advisory-litigation",
+    seo: {
+      title: "Tax Advisory & Litigation | Sagar & Sagar Law Offices",
+      description:
+        "Direct and indirect tax advisory, GST and customs disputes, transfer pricing, reassessment proceedings and appeals before tribunals and High Courts.",
+      primaryKeyword: "tax litigation lawyer India",
+      secondaryKeywords: [
+        "GST dispute advocate India",
+        "income tax appeal ITAT lawyer",
+        "reassessment notice Section 148 defence",
+        "transfer pricing dispute counsel",
+        "customs CESTAT appeal",
+        "show cause notice reply GST",
+        "tax advisory corporate transactions",
+        "DTAA treaty benefit advice",
+        "advance ruling GST application",
+        "indirect tax compliance India",
+      ],
+    },
+    serviceType: "Tax Advisory and Litigation",
+    h1: "Tax Advisory & Litigation",
+    answerFirst:
+      "Tax practice concerns compliance with, and disputes arising under, India's direct and indirect tax legislation, together with the tax consequences of commercial transactions. Sagar & Sagar Law Offices advises on income tax, goods and services tax, customs and transfer pricing matters, and represents taxpayers in assessment, reassessment, audit and investigation proceedings, and in appeals before appellate authorities, tribunals, the High Courts and the Supreme Court of India. The practice covers both preventive advisory at the transaction stage and contentious work once a demand is raised.",
+    overview: [
+      "Tax exposure in India ordinarily crystallises long after the transaction that produced it. An assessment may be reopened years later, a classification adopted at the outset may be questioned on audit, and a position taken in one statute may be examined for consistency under another. The record created at the time of the transaction — the documentation, the disclosure, the contemporaneous rationale — usually determines the outcome of the dispute that follows.",
+      "The practice at Sagar & Sagar Law Offices operates on both sides of that timeline. Advisory work addresses the tax treatment of transactions, structures and arrangements before they are implemented, and the documentation required to support the position adopted. Contentious work covers responses to notices, representation through assessment and audit, and appeals through the statutory hierarchy. Where a tax matter carries a penalty or prosecution dimension, the position is coordinated with the firm's White Collar Crime & Financial Crime Defence practice.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Direct tax advisory",
+        intro: "Advice on income tax treatment before positions are taken.",
+        items: [
+          "Advice on taxability of income and on characterisation of receipts",
+          "Advice on allowability of expenditure and on disallowances",
+          "Advice on capital gains, including on cost of acquisition, indexation and exemptions",
+          "Advice on the tax treatment of business reorganisations, mergers and demergers",
+          "Advice on withholding tax obligations on domestic and cross-border payments",
+          "Advice on tax treatment of employee compensation and share-based arrangements",
+          "Advice on presumptive taxation and on regimes applicable to specified taxpayers",
+          "Advice on tax treatment of trusts, charitable institutions and non-profit entities",
+          "Opinions on tax positions for audit, accounting and disclosure purposes",
+        ],
+      },
+      {
+        heading: "Direct tax assessment, reassessment and dispute",
+        intro: "Proceedings once the revenue authorities take up a matter.",
+        items: [
+          "Representation in scrutiny assessment proceedings, including under faceless procedures",
+          "Responses to notices proposing reassessment and to the preliminary enquiry preceding them",
+          "Objections to reopening of assessment and challenges to jurisdiction",
+          "Representation in search and survey proceedings and in consequential assessments",
+          "Representation in penalty proceedings",
+          "Advice on and applications for stay of demand and recovery",
+          "Rectification, revision and appeal effect proceedings",
+          "Applications for waiver and for settlement, where available under the applicable framework",
+          "Advice and representation where prosecution is proposed under the tax legislation",
+        ],
+      },
+      {
+        heading: "Direct tax appeals",
+        intro: "Challenges through the statutory appellate hierarchy.",
+        items: [
+          "Appeals before the Commissioner of Income Tax (Appeals)",
+          "Appeals before the Income Tax Appellate Tribunal",
+          "Appeals before the High Courts on substantial questions of law",
+          "Appeals and special leave petitions before the Supreme Court of India",
+          "Writ proceedings before the High Courts where the statutory remedy is inadequate",
+          "Representation before the Dispute Resolution Panel, where applicable",
+          "Advice on cross-objections, stay applications and condonation of delay",
+        ],
+      },
+      {
+        heading: "Transfer pricing and international tax",
+        intro: "Cross-border and related party taxation.",
+        items: [
+          "Advice on arm's length pricing of international and specified domestic transactions",
+          "Advice on selection and application of transfer pricing methods",
+          "Transfer pricing documentation, including local file, master file and reporting requirements",
+          "Representation in transfer pricing assessment and before the Transfer Pricing Officer",
+          "Transfer pricing appeals and representation before the Dispute Resolution Panel",
+          "Advice on advance pricing agreements and on the process for concluding them",
+          "Advice on mutual agreement procedure under applicable tax treaties",
+          "Advice on permanent establishment exposure and on attribution of profits",
+          "Advice on availability of treaty benefits and on documentation supporting them",
+          "Advice on anti-avoidance provisions and on their application to specific arrangements",
+          "Advice on taxation of digital and cross-border services",
+        ],
+      },
+      {
+        heading: "Goods and services tax",
+        intro: "Advisory and contentious work under the goods and services tax legislation.",
+        items: [
+          "Advice on registration, place of supply and time of supply",
+          "Advice on classification of goods and services and on applicable rates",
+          "Advice on valuation, including related party and cross-charge transactions",
+          "Advice on eligibility, availment and reversal of input tax credit",
+          "Advice on export, zero-rated supply and refund entitlements",
+          "Preparation and filing of refund applications and representation in refund proceedings",
+          "Responses to departmental audit observations and to notices seeking information",
+          "Responses to show cause notices and representation in adjudication proceedings",
+          "Appeals before the appellate authority and before the appellate tribunal",
+          "Writ proceedings before the High Courts arising from goods and services tax action",
+          "Applications before the Authority for Advance Ruling and appeals therefrom",
+          "Advice on obligations of electronic commerce operators and on collection at source",
+          "Advice on transitional and legacy issues arising from the earlier indirect tax regime",
+        ],
+      },
+      {
+        heading: "Customs, foreign trade and legacy indirect tax",
+        intro: "Duties on import and export and the frameworks surrounding them.",
+        items: [
+          "Advice on classification of imported and exported goods",
+          "Advice on customs valuation, including related party transactions and special valuation",
+          "Advice on exemption notifications and on conditions attaching to them",
+          "Advice on duty drawback and on export promotion schemes",
+          "Representation in investigations by customs and revenue intelligence authorities",
+          "Applications for provisional release of seized goods",
+          "Responses to show cause notices and representation in adjudication",
+          "Appeals before the Customs, Excise and Service Tax Appellate Tribunal",
+          "Advice on penalty and confiscation proceedings",
+          "Legacy proceedings under central excise and service tax legislation",
+          "Advice on trade remedy measures and their application",
+        ],
+      },
+      {
+        heading: "Tax in transactions",
+        intro: "Tax input into commercial transactions as they are structured.",
+        items: [
+          "Tax due diligence in acquisitions and investments",
+          "Advice on tax-efficient structuring of acquisitions and disposals",
+          "Tax indemnities, warranties and covenants in transaction documentation",
+          "Advice on tax consequences of schemes of arrangement",
+          "Advice on tax treatment of debt restructuring and of resolution under insolvency proceedings",
+          "Advice on stamp duty implications of transaction documents",
+          "Advice on tax aspects of fund structures and of distributions",
+          "Advice on withholding and reporting obligations arising on completion",
+        ],
+      },
+    ],
+    forums: [
+      "Assessing officers and appellate authorities under the income tax legislation",
+      "Income Tax Appellate Tribunal",
+      "Dispute Resolution Panel",
+      "Transfer Pricing Officers",
+      "Goods and services tax authorities, appellate authorities and the appellate tribunal",
+      "Authority for Advance Ruling and the Appellate Authority for Advance Ruling",
+      "Customs, Excise and Service Tax Appellate Tribunal",
+      "Directorate of Revenue Intelligence and Directorate General of GST Intelligence",
+      "High Courts, in appellate and writ jurisdiction",
+      "Supreme Court of India",
+      "Competent authorities under tax treaties, in mutual agreement procedure",
+    ],
+    whoWeActFor: [
+      "Companies and limited liability partnerships",
+      "Banks, non-banking financial companies and financial institutions",
+      "Foreign companies with Indian operations or income",
+      "Indian companies with cross-border transactions",
+      "Investment funds and their portfolio entities",
+      "Promoters, directors and individual taxpayers",
+      "Trusts, charitable institutions and family entities",
+      "Importers, exporters and manufacturers",
+      "Parties to transactions requiring tax structuring input",
+    ],
+    approach: [
+      {
+        title: "Documentation prepared at the time of the transaction.",
+        body: "The contemporaneous record generally determines the outcome of a dispute years later. Advisory work includes settling the documentation that will support the position when it is examined.",
+      },
+      {
+        title: "Jurisdiction examined before merits.",
+        body: "In reassessment, recovery and adjudication matters, whether the authority has validly assumed jurisdiction is assessed before the substantive position is argued.",
+      },
+      {
+        title: "Appellate record built from the first response.",
+        body: "Facts and contentions are placed on record at the earliest stage, since appellate forums are ordinarily confined to the record made below.",
+      },
+      {
+        title: "Awareness of penalty and prosecution exposure.",
+        body: "Tax positions can carry consequences beyond the demand itself. Where that exposure exists, it is identified when the position is taken rather than when proceedings are initiated.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What should a taxpayer do on receiving a notice proposing reassessment?",
+        answer:
+          "A notice proposing reassessment ordinarily requires a response within the period stated, and the response forms part of the record for all subsequent proceedings. The taxpayer's position on jurisdiction, on the material relied upon and on the merits should be placed on record at that stage. Objections to the assumption of jurisdiction are ordinarily raised before the assessing authority before any challenge is carried further.",
+      },
+      {
+        question: "What is the appellate hierarchy in direct tax matters?",
+        answer:
+          "An order of the assessing authority is ordinarily appealable to the Commissioner of Income Tax (Appeals), and thereafter to the Income Tax Appellate Tribunal. An appeal from the Tribunal lies to the High Court on a substantial question of law, and from the High Court to the Supreme Court of India. In specified cases, a taxpayer may proceed before the Dispute Resolution Panel instead of the first appellate authority.",
+      },
+      {
+        question: "What is transfer pricing and when does it apply?",
+        answer:
+          "Transfer pricing provisions require that international transactions between associated enterprises, and specified domestic transactions, be conducted at arm's length, and that the taxpayer maintain prescribed documentation supporting the price adopted. Where the authorities consider the price not to be at arm's length, an adjustment may be made to the income of the taxpayer, subject to appeal.",
+      },
+      {
+        question: "What is an advance pricing agreement?",
+        answer:
+          "An advance pricing agreement is an arrangement between a taxpayer and the tax administration determining, in advance, the arm's length price or the methodology for determining it in respect of specified future transactions. It provides certainty for the period covered and may in specified circumstances be applied to earlier years, subject to the conditions of the applicable scheme.",
+      },
+      {
+        question: "How is a GST show cause notice dealt with?",
+        answer:
+          "A show cause notice sets out the demand proposed and the basis for it, and requires the taxpayer to show why the demand should not be confirmed. A reply is filed within the period allowed, supported by documents and by the legal position relied upon, followed by personal hearing. The adjudication order that follows is appealable to the appellate authority and thereafter through the statutory hierarchy.",
+      },
+      {
+        question: "When can input tax credit be denied?",
+        answer:
+          "The goods and services tax legislation makes availment of input tax credit subject to conditions, including possession of a valid tax invoice, receipt of the goods or services, payment of tax to the government by the supplier, and filing of the prescribed returns, together with express restrictions on credit in specified cases. Disputes commonly arise from supplier default, classification and use of inputs for exempt supplies.",
+      },
+      {
+        question: "Can a High Court be approached directly in a tax matter?",
+        answer:
+          "Writ jurisdiction is ordinarily exercised sparingly in tax matters where a statutory remedy exists. Courts have entertained writ petitions in circumstances including want of jurisdiction, breach of natural justice, and challenges to the vires of a provision. Whether the writ route is available depends on the nature of the grievance rather than on the convenience of the taxpayer.",
+      },
+      {
+        question: "Does a tax dispute expose a taxpayer to prosecution?",
+        answer:
+          "The direct and indirect tax statutes contain penalty provisions and, separately, provisions for prosecution in specified circumstances involving wilful conduct. Not every demand carries such exposure. Where the allegations involve concealment, evasion or falsification, exposure under other legislation may also arise and is assessed alongside the tax position.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "corporate-ma-private-equity-capital-markets",
+      "white-collar-financial-crime-defence",
+      "regulatory-competition-compliance",
+      "litigation-dispute-resolution",
+    ],
+    breadcrumbLabel: "Tax Advisory & Litigation",
+  },
+
+  "technology-ai-data-privacy-cybersecurity": {
+    slug: "technology-ai-data-privacy-cybersecurity",
+    seo: {
+      title: "Technology, AI, Data Privacy & Cybersecurity | Sagar & Sagar",
+      description:
+        "DPDP Act compliance, IT Act and intermediary obligations, technology contracting, AI governance, cyber incident response and telecom regulation.",
+      primaryKeyword: "data protection lawyer India",
+      secondaryKeywords: [
+        "DPDP Act 2023 compliance advisory",
+        "IT Act intermediary liability India",
+        "cyber incident response legal counsel",
+        "CERT-In reporting obligations",
+        "AI governance legal India",
+        "SaaS agreement drafting India",
+        "technology outsourcing contract lawyer",
+        "data breach notification India",
+        "e-commerce rules compliance",
+        "telecom regulatory advisory India",
+      ],
+    },
+    serviceType: "Technology, AI, Data Privacy and Cybersecurity",
+    h1: "Technology, AI, Data Privacy & Cybersecurity",
+    answerFirst:
+      "Technology and data practice concerns the legal framework applicable to digital products, platforms and infrastructure, the processing of personal data, and the response to cyber incidents. Sagar & Sagar Law Offices advises on obligations under the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000, drafts and negotiates technology and data processing contracts, advises on artificial intelligence deployment and governance, and represents businesses in regulatory proceedings and in disputes arising from technology arrangements. Work spans preventive compliance, transactional documentation and incident response.",
+    overview: [
+      "India's technology regulation has moved from a single statute to a layered framework. The Information Technology Act, 2000 continues to govern electronic records, offences and intermediary obligations; the Digital Personal Data Protection Act, 2023 establishes a consent-based regime for personal data with its own regulator; sectoral regulators impose their own cyber security and data requirements on regulated entities; and directions issued to computer resource operators impose incident reporting obligations independent of all of these. A single technology business will typically be subject to several of these at once.",
+      "The practice at Sagar & Sagar Law Offices covers this framework as it applies to products, contracts and incidents. Work includes data protection compliance programmes and documentation, technology contracting across procurement and supply, advice on platform and intermediary obligations, governance advice on artificial intelligence deployment, and legal support during and after a cyber incident. Where a technology matter involves intellectual property or content regulation, it is conducted with the firm's Intellectual Property and Media practices.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Data protection compliance",
+        intro: "Obligations concerning the processing of personal data.",
+        items: [
+          "Advice on the application of the Digital Personal Data Protection Act, 2023 to a business and its processing activities",
+          "Data mapping and assessment of processing activities against statutory obligations",
+          "Advice on the lawful basis for processing and on the consent architecture required",
+          "Drafting of privacy notices and consent language",
+          "Advice on purpose limitation, data minimisation and retention",
+          "Advice on rights of data principals and on mechanisms for exercising them",
+          "Advice on obligations applicable to significant data fiduciaries, where notified as such",
+          "Advice on engagement of data processors and on the contractual terms required",
+          "Advice on cross-border transfer of personal data",
+          "Internal data protection policies, standard operating procedures and training material",
+          "Advice on obligations concerning the personal data of children",
+          "Advice on the interaction between data protection obligations and sectoral regulatory requirements",
+        ],
+      },
+      {
+        heading: "Cyber incident response and cybersecurity",
+        intro: "Legal work before, during and after a security incident.",
+        items: [
+          "Advice on incident reporting obligations, including directions applicable to computer resource operators",
+          "Advice on notification obligations to regulators, data principals and counterparties",
+          "Legal support during incident response, including preservation of evidence and privilege",
+          "Advice on log retention and record-keeping obligations",
+          "Advice on regulatory follow-up and inquiry arising from an incident",
+          "Advice on contractual liability and indemnity positions arising from incidents affecting vendors or customers",
+          "Advice on ransomware and extortion situations and the legal constraints applicable",
+          "Advice on cyber security requirements imposed on regulated entities by sectoral regulators",
+          "Incident response plans, escalation protocols and tabletop documentation",
+          "Advice on obligations relating to critical information infrastructure, where applicable",
+        ],
+      },
+      {
+        heading: "Intermediary, platform and content obligations",
+        intro: "Obligations of entities hosting or transmitting third-party content.",
+        items: [
+          "Advice on availability of and conditions attaching to safe harbour for intermediaries",
+          "Advice on due diligence obligations under the applicable intermediary rules",
+          "Advice on grievance redressal mechanisms and officer appointment requirements",
+          "Advice on takedown obligations and on responses to takedown requests",
+          "Advice on responses to requests and orders from government authorities",
+          "Advice on obligations relating to traceability and information requests, where applicable",
+          "Advice on user terms, community standards and acceptable use policies",
+          "Advice on obligations of significant social media intermediaries, where applicable",
+          "Advice on obligations applicable to online gaming and to the regulatory framework governing it",
+          "Representation in proceedings arising from content and platform obligations",
+        ],
+      },
+      {
+        heading: "Artificial intelligence",
+        intro: "Legal and governance work concerning the development and deployment of AI systems.",
+        items: [
+          "Advice on the legal framework applicable to AI deployment in India",
+          "Advice on the interaction between AI systems and data protection obligations",
+          "Advice on training data, its sourcing and the rights required in respect of it",
+          "Advice on ownership of and rights in AI-generated output",
+          "Advice on allocation of liability for AI system outputs in commercial contracts",
+          "Drafting of AI procurement, development and deployment agreements",
+          "Advice on AI governance frameworks, internal policies and human oversight arrangements",
+          "Advice on transparency, disclosure and labelling of AI-generated content",
+          "Advice on sector-specific constraints on automated decision-making",
+          "Advice on synthetic media, deepfakes and associated exposure",
+          "Contractual and regulatory advice for businesses embedding third-party AI services",
+        ],
+      },
+      {
+        heading: "Technology contracting",
+        intro: "Documentation through which technology is procured and supplied.",
+        items: [
+          "Drafting and negotiation of software licensing agreements",
+          "Drafting and negotiation of software as a service and subscription agreements",
+          "Cloud services agreements and advice on data location and access terms",
+          "Master services agreements and statements of work",
+          "Technology development and implementation agreements",
+          "Information technology outsourcing and managed services agreements",
+          "Data processing agreements and data sharing arrangements",
+          "Service level agreements, credits and remedies for failure",
+          "Source code escrow arrangements",
+          "Advice on open source licensing and compliance",
+          "Reseller, distributor and channel partner agreements",
+          "Advice on limitation of liability, indemnity and allocation of risk in technology contracts",
+          "Technology and data due diligence in transactions",
+        ],
+      },
+      {
+        heading: "Electronic commerce and digital business",
+        intro: "Regulation of commerce conducted through digital channels.",
+        items: [
+          "Advice on obligations applicable to electronic commerce entities and marketplaces",
+          "Advice on seller onboarding, listing and liability allocation",
+          "Advice on consumer disclosure, pricing and cancellation requirements",
+          "Advice on returns, refunds and grievance handling obligations",
+          "Website and application terms of use and customer-facing documentation",
+          "Advice on advertising, endorsement and disclosure obligations in digital channels",
+          "Advice on payment integration and its regulatory requirements",
+          "Advice on digital contracting, electronic signatures and record retention",
+        ],
+      },
+      {
+        heading: "Telecommunications and digital infrastructure",
+        intro: "Regulation of communications services and networks.",
+        items: [
+          "Advice on the framework applicable to telecommunication services and networks",
+          "Advice on authorisation and licensing requirements",
+          "Advice on obligations imposed on service providers, including in relation to interception and security",
+          "Advice on regulatory proceedings before the sectoral regulator",
+          "Representation before the telecom disputes appellate tribunal",
+          "Advice on infrastructure sharing and interconnection arrangements",
+        ],
+      },
+      {
+        heading: "Technology disputes and cybercrime",
+        intro: "Contentious work arising from technology arrangements and misuse.",
+        items: [
+          "Disputes arising from technology contracts, including implementation failure and termination",
+          "Disputes concerning data, access and confidential information",
+          "Advice and complaints in respect of cyber fraud, unauthorised access and data theft",
+          "Representation in proceedings concerning offences under the Information Technology Act, 2000",
+          "Advice on preservation and admissibility of electronic evidence",
+          "Injunctive relief in respect of misuse of data or systems",
+          "Advice on employee misconduct involving systems and data",
+          "Coordination where a cyber incident gives rise to financial crime exposure",
+        ],
+      },
+    ],
+    forums: [
+      "Data Protection Board constituted under the Digital Personal Data Protection Act, 2023",
+      "Ministry of Electronics and Information Technology",
+      "Indian Computer Emergency Response Team, in respect of incident reporting",
+      "Adjudicating officers appointed under the Information Technology Act, 2000",
+      "Sectoral regulators imposing cyber security and data requirements",
+      "Telecom Regulatory Authority of India and the Telecom Disputes Settlement and Appellate Tribunal",
+      "Central Consumer Protection Authority, in respect of digital commerce",
+      "Cyber crime investigation units and police authorities",
+      "Commercial Courts and Commercial Divisions, in technology contract disputes",
+      "High Courts and the Supreme Court of India",
+    ],
+    whoWeActFor: [
+      "Technology and software companies",
+      "Platforms, marketplaces and intermediaries",
+      "Financial services entities in respect of their technology and data obligations",
+      "Enterprises procuring technology and outsourcing services",
+      "Startups and early stage technology businesses",
+      "Businesses deploying artificial intelligence systems",
+      "Data fiduciaries and data processors",
+      "Telecommunications and infrastructure providers",
+      "Entities responding to cyber incidents",
+    ],
+    approach: [
+      {
+        title: "Obligations identified across frameworks, not within one.",
+        body: "A technology business is usually subject to general data protection law, information technology law, sectoral regulation and contractual obligation at once. Advice establishes the full set before addressing any single requirement.",
+      },
+      {
+        title: "Compliance built into the product, not appended to it.",
+        body: "Consent architecture, notices and retention are addressed at the design stage, since retrofitting them into a live product is materially harder.",
+      },
+      {
+        title: "Incident response planned in advance.",
+        body: "Reporting timelines in cyber incidents are short. Obligations, escalation paths and evidence preservation protocols are settled before an incident rather than during one.",
+      },
+      {
+        title: "Contractual risk allocated deliberately.",
+        body: "Liability, indemnity and service level provisions in technology contracts are negotiated by reference to the actual failure modes of the arrangement rather than to standard positions.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Who must comply with the Digital Personal Data Protection Act, 2023?",
+        answer:
+          "The Act applies to the processing of digital personal data within India, and to processing outside India where it is in connection with the offering of goods or services to data principals within India, subject to the exemptions in the Act. Obligations fall principally on data fiduciaries, who determine the purpose and means of processing, with processors acting under contract with them.",
+      },
+      {
+        question: "What is the difference between a data fiduciary and a data processor?",
+        answer:
+          "A data fiduciary determines the purpose and means of processing personal data and bears the principal statutory obligations, including in relation to notice, consent, security and breach intimation. A data processor processes personal data on behalf of a data fiduciary under a contract. The distinction is determined by function rather than by the label used in an agreement.",
+      },
+      {
+        question: "What are the obligations following a personal data breach?",
+        answer:
+          "The Digital Personal Data Protection Act, 2023 requires a data fiduciary to give intimation of a personal data breach in the manner and to the persons specified under the Act and the rules framed under it. Separate incident reporting obligations may apply under directions issued to computer resource operators, and sectoral regulators may impose their own reporting requirements on regulated entities. The obligations operate independently and should be assessed together.",
+      },
+      {
+        question: "What is safe harbour for intermediaries?",
+        answer:
+          "The Information Technology Act, 2000 provides that an intermediary is not liable for third-party information hosted or transmitted by it, subject to the conditions in that provision and to observance of the due diligence prescribed by the applicable rules. The protection is conditional, and failure to observe the prescribed due diligence or to act upon a valid order may result in its loss.",
+      },
+      {
+        question: "Is there a dedicated law regulating artificial intelligence in India?",
+        answer:
+          "India does not presently have a single dedicated statute governing artificial intelligence. AI deployment is regulated through existing frameworks, including data protection law, information technology law, sectoral regulation, consumer protection and contract, together with advisories issued from time to time. The position is developing, and businesses deploying AI should assess exposure across those frameworks rather than await a single instrument.",
+      },
+      {
+        question: "Who owns the output generated by an AI system?",
+        answer:
+          "Ownership of AI-generated output is not settled by dedicated statutory provision in India, and existing copyright law contemplates authorship in terms that do not map straightforwardly onto machine-generated material. In practice, allocation is addressed contractually between the parties to a development or deployment arrangement. The position on training data and on inputs is addressed separately.",
+      },
+      {
+        question: "What should a company do first after a cyber incident?",
+        answer:
+          "The immediate legal considerations are preservation of evidence and logs, assessment of reporting obligations and their timelines, identification of the personal data affected, and management of communications so that privilege is not inadvertently lost. Reporting timelines under the applicable directions can be short, which is why obligations are ordinarily mapped before an incident occurs.",
+      },
+      {
+        question: "What should a data processing agreement contain?",
+        answer:
+          "A data processing agreement ordinarily records the scope, purpose and duration of processing, the categories of data and data principals, restrictions on further processing and sub-processing, security obligations, assistance with data principal requests, breach notification, audit rights, and obligations on deletion or return of data. Terms should reflect the statutory obligations of the fiduciary, which cannot be discharged by contract alone.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "intellectual-property",
+      "media-entertainment-digital-content",
+      "regulatory-competition-compliance",
+      "nbfc-fintech-financial-regulatory-advisory",
+    ],
+    breadcrumbLabel: "Technology, AI, Data Privacy & Cybersecurity",
+  },
+
+  "media-entertainment-digital-content": {
+    slug: "media-entertainment-digital-content",
+    seo: {
+      title: "Media, Entertainment & Digital Content | Sagar & Sagar",
+      description:
+        "Film and OTT content agreements, certification and content regulation, music and talent contracts, defamation, personality rights and advertising law.",
+      primaryKeyword: "media entertainment lawyer India",
+      secondaryKeywords: [
+        "film production agreement India",
+        "OTT content regulation IT Rules",
+        "music licensing agreement India",
+        "personality rights protection India",
+        "defamation lawyer media",
+        "advertising law compliance CCPA",
+        "talent contract negotiation entertainment",
+        "broadcasting regulation advisory India",
+        "content chain of title",
+        "influencer disclosure guidelines India",
+      ],
+    },
+    serviceType: "Media, Entertainment and Digital Content",
+    h1: "Media, Entertainment & Digital Content",
+    answerFirst:
+      "Media and entertainment practice concerns the creation, financing, licensing, distribution and regulation of content across film, television, streaming, music, publishing and digital platforms. Sagar & Sagar Law Offices advises on production and talent documentation, content acquisition and distribution arrangements, certification and content regulation, music and format licensing, and advertising compliance, and acts in disputes concerning defamation, personality rights and content misuse. Work covers both the transactional documentation underlying content and the regulatory framework governing its exhibition.",
+    overview: [
+      "Content in India is regulated differently according to how it reaches the audience. Theatrical film is subject to certification under cinematograph legislation; television is governed by programme and advertising codes under cable television legislation; content published or curated online falls within the digital media framework established by the intermediary and digital media ethics rules, with its own tiered grievance structure. The same underlying content may therefore face different requirements in each medium in which it is released.",
+      "Alongside regulation sits the contractual layer. Rights in content originate in copyright and are acquired, licensed and sub-licensed through a chain of agreements running from writer and composer through producer, distributor and platform. Where that chain is incomplete, the consequences surface at distribution, financing or enforcement. The practice at Sagar & Sagar Law Offices covers both layers: documentation that establishes and transfers rights, and the regulatory and contentious work that follows once content is released.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Film, television and streaming production",
+        intro: "Documentation through which audiovisual content is created and rights secured.",
+        items: [
+          "Advice on chain of title and on the documentation required to establish it",
+          "Option and rights acquisition agreements for underlying literary and other works",
+          "Writer, director and screenplay agreements",
+          "Producer and co-production agreements, including international co-production arrangements",
+          "Talent and artist engagement agreements, including exclusivity and morality provisions",
+          "Crew, technician and vendor agreements",
+          "Location agreements, permissions and clearance documentation",
+          "Advice on clearances for third-party material, including music, footage and trade marks",
+          "Advice on errors and omissions insurance requirements",
+          "Completion, delivery and technical acceptance provisions",
+        ],
+      },
+      {
+        heading: "Content acquisition, distribution and exhibition",
+        intro: "Arrangements through which content reaches audiences.",
+        items: [
+          "Theatrical distribution agreements",
+          "Licensing agreements with streaming platforms and broadcasters",
+          "Syndication and secondary rights licensing",
+          "Territory, term and media rights structuring",
+          "Format licensing and adaptation agreements",
+          "Advice on revenue sharing, minimum guarantees and recoupment",
+          "Advice on holdbacks, windowing and exclusivity",
+          "Digital distribution and aggregation arrangements",
+          "Advice on subtitling, dubbing and localisation rights",
+        ],
+      },
+      {
+        heading: "Music and audio",
+        intro: "Rights and arrangements specific to musical works and sound recordings.",
+        items: [
+          "Advice on the distinction between rights in musical works, literary works and sound recordings",
+          "Composer, lyricist and performer agreements",
+          "Music licensing for audiovisual synchronisation",
+          "Advice on public performance and communication to the public rights",
+          "Advice on the role of copyright societies and on licensing through them",
+          "Advice on statutory licensing provisions, where applicable",
+          "Recording, publishing and distribution agreements",
+          "Advice on royalties and their allocation between rights holders",
+          "Advice on rights of authors and performers under copyright legislation",
+        ],
+      },
+      {
+        heading: "Content regulation and certification",
+        intro: "Regulatory requirements governing exhibition and publication.",
+        items: [
+          "Advice on film certification and on the certification process",
+          "Advice on categories of certification and on conditions and excisions",
+          "Challenges to certification decisions",
+          "Advice on programme and advertising codes applicable to television",
+          "Advice on the digital media framework applicable to online curated content and news publishers",
+          "Advice on self-regulatory mechanisms and on grievance redressal obligations",
+          "Advice on content classification, age ratings and access control requirements",
+          "Advice on obligations relating to accessibility and disclosures",
+          "Representation in proceedings arising from content regulation",
+          "Advice on anti-piracy measures and on remedies against unauthorised exhibition and camcording",
+        ],
+      },
+      {
+        heading: "Advertising and marketing regulation",
+        intro: "Requirements applicable to commercial communication.",
+        items: [
+          "Review of advertising and marketing material for legal and regulatory compliance",
+          "Advice on misleading advertisement exposure and on substantiation of claims",
+          "Advice on comparative advertising and disparagement",
+          "Advice on surrogate advertising and on category-specific restrictions",
+          "Advice on endorsement obligations and on due diligence expected of endorsers",
+          "Advice on influencer marketing and on disclosure requirements",
+          "Brand ambassador, endorsement and sponsorship agreements",
+          "Advice on contests, promotions and prize schemes",
+          "Representation in proceedings before consumer and advertising authorities",
+          "Disputes concerning comparative and disparaging advertising",
+        ],
+      },
+      {
+        heading: "Personality, publicity and reputation",
+        intro: "Rights attaching to individuals and their protection.",
+        items: [
+          "Advice on personality and publicity rights and on their protection under Indian law",
+          "Enforcement against unauthorised commercial use of name, image, likeness and voice",
+          "Advice on synthetic media and unauthorised digital replication of persona",
+          "Endorsement and merchandising arrangements for individuals",
+          "Civil defamation proceedings, including applications for injunctive relief",
+          "Defence of defamation proceedings, including on grounds available to publishers",
+          "Advice on criminal defamation exposure",
+          "Pre-publication and pre-broadcast review of content for legal risk",
+          "Advice on privacy exposure arising from publication",
+          "Takedown and de-indexing requests in respect of published material",
+        ],
+      },
+      {
+        heading: "Publishing, news media and digital publishing",
+        intro: "Work specific to written and journalistic content.",
+        items: [
+          "Publishing and author agreements",
+          "Advice on registration requirements applicable to periodicals",
+          "Advice on obligations applicable to digital news publishers",
+          "Pre-publication legal review of manuscripts and articles",
+          "Advice on reporting restrictions and on contempt exposure",
+          "Advice on source protection and on confidentiality of material",
+          "Advice on right of reply, corrections and retraction",
+        ],
+      },
+      {
+        heading: "Sports, gaming and live events",
+        intro: "Adjacent sectors sharing the same rights and regulatory structures.",
+        items: [
+          "Media rights and broadcasting arrangements for sporting events",
+          "Sponsorship, franchise and team agreements",
+          "Advice on event organisation, permissions and liability",
+          "Ticketing terms and venue agreements",
+          "Advice on the regulatory framework applicable to online gaming",
+          "Advice on esports arrangements and player agreements",
+          "Advice on ambush marketing and event mark protection",
+        ],
+      },
+    ],
+    forums: [
+      "Central Board of Film Certification",
+      "Ministry of Information and Broadcasting",
+      "Self-regulatory bodies constituted under the applicable digital media framework",
+      "Central Consumer Protection Authority, in respect of advertising",
+      "Advertising self-regulatory bodies",
+      "Registrar of Copyrights and copyright societies",
+      "Commercial Courts and Commercial Divisions",
+      "High Courts, including intellectual property divisions where constituted",
+      "Courts of Magistrates and Sessions Courts, in criminal proceedings",
+      "Supreme Court of India",
+    ],
+    whoWeActFor: [
+      "Production houses and independent producers",
+      "Streaming platforms and broadcasters",
+      "Distributors, exhibitors and aggregators",
+      "Music labels, publishers and composers",
+      "Writers, directors, artists and performers",
+      "Advertising agencies and brand owners",
+      "Publishers and digital news organisations",
+      "Sports bodies, franchises and event organisers",
+      "Individuals seeking protection of reputation and persona",
+    ],
+    approach: [
+      {
+        title: "Chain of title established before it is relied upon.",
+        body: "Financing, distribution and enforcement all depend on an unbroken chain of rights. Gaps are identified at documentation stage, where they can still be cured.",
+      },
+      {
+        title: "Regulatory position assessed per medium.",
+        body: "Content released theatrically, on television and on streaming platforms is subject to different frameworks. Advice addresses each medium in which release is contemplated rather than treating content as uniformly regulated.",
+      },
+      {
+        title: "Pre-publication review treated as risk management.",
+        body: "Reviewing content before release is materially less costly than responding to proceedings after it. Review is conducted against defamation, privacy, contempt and regulatory exposure together.",
+      },
+      {
+        title: "Speed recognised in content disputes.",
+        body: "Injunctions in content matters are frequently sought and resisted on urgent timelines close to release dates. Positions are prepared with that timetable in view.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is chain of title in a film or content production?",
+        answer:
+          "Chain of title is the documented sequence of agreements establishing that the producer holds all rights necessary to make, distribute and exploit the content, running from the underlying work through writer, composer, performer and other contributor agreements. Distributors, platforms and financiers ordinarily require it to be demonstrated, and gaps commonly surface at the point of licensing rather than at creation.",
+      },
+      {
+        question: "How is online streaming content regulated in India?",
+        answer:
+          "Content made available by online curated content publishers is governed by the digital media framework established under the intermediary and digital media ethics rules, which provides for a code of ethics, content classification and a tiered grievance redressal structure comprising self-regulation by the publisher, a self-regulatory body, and an oversight mechanism. This framework operates separately from film certification and from the codes applicable to television.",
+      },
+      {
+        question: "Does streaming content require CBFC certification?",
+        answer:
+          "Certification under cinematograph legislation applies to films exhibited theatrically. Content released on online curated content platforms is instead subject to the classification and code of ethics requirements under the digital media framework, which places responsibility for classification on the publisher. A film released both theatrically and on a platform may engage both frameworks at different stages.",
+      },
+      {
+        question: "What rights are involved in using a song in a film?",
+        answer:
+          "A single song ordinarily involves distinct rights: copyright in the musical work, copyright in the literary work comprising the lyrics, and copyright in the sound recording, together with rights of the performer. Synchronisation of a song with visual images requires permissions covering each relevant right from the persons entitled to grant them, which may include copyright societies.",
+      },
+      {
+        question: "Are personality rights recognised in India?",
+        answer:
+          "There is no dedicated statute conferring personality or publicity rights in India. Protection has been extended through common law principles, including passing off, and through the law relating to privacy and to unauthorised commercial exploitation, with courts granting relief in appropriate cases. The scope of protection continues to develop, particularly in relation to digitally generated likenesses.",
+      },
+      {
+        question: "What are the requirements for influencer advertising disclosure?",
+        answer:
+          "Guidance issued in respect of endorsements requires material connections between an endorser and an advertiser to be disclosed clearly and prominently in the communication concerned. Endorsers are also expected to have exercised due diligence in respect of claims they make. Exposure may arise under consumer protection legislation for both the advertiser and the endorser.",
+      },
+      {
+        question: "Can a publication be restrained before it is released?",
+        answer:
+          "Courts have exercised the power to restrain publication in appropriate cases, but pre-publication restraint is approached with caution given the constitutional protection afforded to speech and expression. Applications are generally assessed against the strength of the claimant's case and the nature of the harm alleged. Post-publication remedies, including damages and takedown, are more commonly available.",
+      },
+      {
+        question: "What is the difference between civil and criminal defamation?",
+        answer:
+          "Civil defamation is a claim for damages and injunctive relief brought by the person defamed, decided on the civil standard. Criminal defamation is an offence under the applicable penal legislation, prosecuted separately, with defences and exceptions set out in the statute. Both may in principle be pursued in respect of the same publication, and each carries different procedural consequences.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "intellectual-property",
+      "technology-ai-data-privacy-cybersecurity",
+      "litigation-dispute-resolution",
+      "private-clients-family-wealth",
+    ],
+    breadcrumbLabel: "Media, Entertainment & Digital Content",
+  },
+
+  "private-clients-family-wealth": {
+    slug: "private-clients-family-wealth",
+    seo: {
+      title: "Private Clients & Family Wealth | Sagar & Sagar Law Offices",
+      description:
+        "Wills, succession planning, private trusts, probate, family settlements, family business governance and cross-border estate structuring.",
+      primaryKeyword: "succession planning lawyer India",
+      secondaryKeywords: [
+        "will drafting advocate India",
+        "probate letters of administration lawyer",
+        "private trust formation India",
+        "family settlement agreement",
+        "HUF partition legal advice",
+        "succession certificate application",
+        "family business governance charter",
+        "NRI inheritance India property",
+        "estate planning high net worth India",
+        "will challenge testamentary capacity",
+      ],
+    },
+    serviceType: "Private Clients and Family Wealth",
+    h1: "Private Clients & Family Wealth",
+    answerFirst:
+      "Private client practice concerns the ordering, transmission and protection of personal and family wealth, including succession planning, testamentary documentation, trusts, and the governance of family-owned businesses. Sagar & Sagar Law Offices advises individuals and families on wills, private trusts, family settlements and estate structuring, acts in probate, letters of administration and succession certificate proceedings, and advises on the separation of family and business interests. Work covers both planning undertaken during lifetime and proceedings arising after death or on disagreement within a family.",
+    overview: [
+      "Succession in India is governed by personal law as much as by general statute. Which regime applies to an individual's estate depends on the individual's religion and, in some cases, on the nature and location of the property. The Indian Succession Act, 1925 governs testamentary succession generally and intestate succession for some communities; the Hindu Succession Act, 1956 governs intestate succession for others; Muslim personal law applies its own rules, including limits on testamentary disposition. Coparcenary property, agricultural land and property held in different states each add further variation.",
+      "The consequence is that an estate left without planning frequently devolves in a way the deceased did not intend, and often to the accompaniment of litigation between family members. The practice at Sagar & Sagar Law Offices addresses this on both sides: structuring undertaken during lifetime — wills, trusts, family arrangements and business governance documentation — and representation in contentious and non-contentious proceedings once an estate falls into administration or a family disagreement arises.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Wills and testamentary documentation",
+        intro: "Instruments directing how an estate is to devolve.",
+        items: [
+          "Advice on the succession regime applicable to an individual and to particular assets",
+          "Drafting of wills, including wills disposing of assets in more than one jurisdiction",
+          "Advice on execution, attestation and the formalities required for validity",
+          "Advice on registration of wills and on its evidentiary consequences",
+          "Drafting of codicils and periodic review of existing testamentary documents",
+          "Advice on testamentary guardianship of minor children",
+          "Advice on bequests to charity and on charitable dispositions",
+          "Advice on limits on testamentary disposition under applicable personal law",
+          "Safekeeping arrangements and advice on custody of testamentary documents",
+          "Advice on nomination and its relationship to succession",
+        ],
+      },
+      {
+        heading: "Private trusts and wealth structuring",
+        intro: "Structures through which assets are held and transmitted.",
+        items: [
+          "Advice on the use of private trusts for succession and asset protection",
+          "Formation of private trusts, including discretionary and specific trusts",
+          "Drafting of trust deeds, letters of wishes and ancillary documentation",
+          "Advice on selection of trustees, protectors and their respective powers",
+          "Advice on tax treatment applicable to trusts and to distributions",
+          "Advice on transfer of assets into trust and on the consequences of doing so",
+          "Advice on holding structures for family assets, including companies and limited liability partnerships",
+          "Advice on succession to shareholdings and to business interests",
+          "Advice on structuring for family members resident outside India",
+          "Restructuring, variation and termination of existing trusts",
+        ],
+      },
+      {
+        heading: "Family settlements and arrangements",
+        intro: "Consensual resolution of family entitlements.",
+        items: [
+          "Advice on family settlements and family arrangements",
+          "Drafting of settlement deeds and memoranda of family arrangement",
+          "Advice on partition of Hindu undivided family property and on coparcenary rights",
+          "Advice on the position of daughters and of successors under applicable personal law",
+          "Advice on the stamp duty and registration treatment of settlement documentation",
+          "Negotiation and mediation of family disputes concerning property and entitlements",
+          "Advice on release, relinquishment and gift as alternatives to settlement",
+          "Documentation recording separation of jointly held assets and business interests",
+        ],
+      },
+      {
+        heading: "Probate, administration and estate proceedings",
+        intro: "Proceedings arising after death.",
+        items: [
+          "Applications for probate of a will",
+          "Applications for letters of administration where there is no will or no executor",
+          "Applications for succession certificates in respect of debts and securities",
+          "Advice on whether probate is required, having regard to the applicable law and jurisdiction",
+          "Representation in contentious probate proceedings",
+          "Caveats and opposition to grants",
+          "Challenges to wills, including on grounds of testamentary capacity, undue influence and suspicious circumstances",
+          "Defence of wills against challenge",
+          "Advice to executors and administrators on their duties and liabilities",
+          "Administration of estates, including collection, realisation and distribution of assets",
+          "Disputes between beneficiaries and personal representatives",
+        ],
+      },
+      {
+        heading: "Family business governance and succession",
+        intro: "Separation of ownership, management and family relationships.",
+        items: [
+          "Advice on succession to management and to ownership of family businesses",
+          "Drafting of family constitutions and family charters",
+          "Advice on family councils and on governance forums",
+          "Shareholders' agreements between family members",
+          "Advice on transfer restrictions, pre-emption rights and exit mechanisms within families",
+          "Advice on the position of family members not active in the business",
+          "Advice on professionalisation of management and on board composition",
+          "Advice on separation of family branches and on demerger of business interests",
+          "Advice on treatment of family businesses in wills and trust structures",
+          "Resolution of disputes between family shareholders, including through mediation",
+        ],
+      },
+      {
+        heading: "Cross-border and non-resident matters",
+        intro: "Estates and families with connections outside India.",
+        items: [
+          "Advice on succession to Indian assets held by persons resident outside India",
+          "Advice on acquisition, holding and transfer of immovable property in India by non-residents",
+          "Advice on repatriation of inheritance proceeds and applicable exchange control requirements",
+          "Advice on interaction between Indian wills and testamentary documents made abroad",
+          "Advice on recognition of foreign grants and on ancillary proceedings in India",
+          "Advice on residence and its consequences for wealth structuring",
+          "Coordination with foreign advisers on multi-jurisdictional estates",
+        ],
+      },
+      {
+        heading: "Personal protection and elder matters",
+        intro: "Arrangements for incapacity, care and personal circumstances.",
+        items: [
+          "Powers of attorney, including general and specific instruments, and advice on their limits",
+          "Advice on arrangements for management of affairs during incapacity",
+          "Advice on guardianship of minors and of persons unable to manage their affairs",
+          "Advice on advance directives and on nominated representatives under mental healthcare legislation",
+          "Advice on maintenance and welfare entitlements of parents and senior citizens",
+          "Proceedings under legislation providing for maintenance and protection of senior citizens",
+          "Advice on protection of vulnerable family members within estate structures",
+        ],
+      },
+      {
+        heading: "Philanthropy and charitable structures",
+        intro: "Structures through which families give.",
+        items: [
+          "Advice on choice of vehicle for charitable activity, including trusts, societies and companies established for charitable purposes",
+          "Formation and registration of charitable entities",
+          "Advice on registration for tax exemption and on donor deduction entitlements",
+          "Advice on obligations applicable to receipt of foreign contributions",
+          "Governance and compliance advice for family foundations",
+          "Advice on corporate social responsibility arrangements connected to family businesses",
+        ],
+      },
+    ],
+    forums: [
+      "District Courts and High Courts exercising testamentary and intestate jurisdiction",
+      "Civil Courts, in partition, declaration and title proceedings",
+      "Sub-Registrars, in registration of testamentary and settlement documentation",
+      "Tribunals constituted under legislation for maintenance and welfare of senior citizens",
+      "National Company Law Tribunal, in family company disputes",
+      "Authorities administering registration of charitable entities and foreign contribution requirements",
+      "Arbitral tribunals and mediators, in family dispute resolution",
+      "Supreme Court of India",
+    ],
+    whoWeActFor: [
+      "Individuals and families undertaking succession planning",
+      "Promoters and founders of family-owned businesses",
+      "Executors, administrators and trustees",
+      "Beneficiaries under wills and trusts",
+      "Family members in disputes concerning inheritance and property",
+      "Persons resident outside India holding assets in India",
+      "Family offices and their advisers",
+      "Charitable trusts, foundations and their trustees",
+      "Guardians and persons responsible for the affairs of others",
+    ],
+    approach: [
+      {
+        title: "Applicable regime determined before documents are drafted.",
+        body: "Personal law, the nature of the property and its location together determine what can be disposed of and how. That assessment precedes drafting rather than following it.",
+      },
+      {
+        title: "Documents drafted to withstand challenge.",
+        body: "Wills and settlements are frequently contested by those they disappoint. Execution, attestation, contemporaneous record and internal consistency are attended to on the footing that the document will be scrutinised after the maker is unavailable to explain it.",
+      },
+      {
+        title: "Family and business interests addressed together.",
+        body: "Where the principal asset is a business, succession documentation and shareholding arrangements are drafted as one exercise, since inconsistency between a will and a shareholders' agreement is a common source of dispute.",
+      },
+      {
+        title: "Discretion.",
+        body: "Matters in this practice concern private family circumstances and are conducted accordingly.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Which law governs succession to my estate in India?",
+        answer:
+          "Succession in India is governed by personal law and by general statute according to the individual concerned. The Indian Succession Act, 1925 governs testamentary succession generally, and intestate succession for certain communities; the Hindu Succession Act, 1956 governs intestate succession for Hindus, Buddhists, Jains and Sikhs; Muslim personal law applies its own rules. The nature and location of particular assets may also affect the position.",
+      },
+      {
+        question: "Does a will need to be registered in India?",
+        answer:
+          "Registration of a will is optional under Indian law, and an unregistered will is not invalid for that reason. Registration provides evidentiary advantages and reduces the scope for allegations of fabrication, but does not by itself establish validity, which depends on due execution and attestation and on the testator's capacity and free will.",
+      },
+      {
+        question: "Is probate always required?",
+        answer:
+          "Whether probate is required depends on the applicable law, on the community of the testator and on the jurisdiction in which the assets lie, as the Indian Succession Act, 1925 makes probate mandatory in specified circumstances and areas. Where probate is not mandatory, it may still be sought where institutions holding assets require a grant before acting.",
+      },
+      {
+        question: "What is the difference between probate, letters of administration and a succession certificate?",
+        answer:
+          "Probate is a grant certifying a will and confirming the executor's authority. Letters of administration are granted where there is no will, or where a will exists but no executor is available to act. A succession certificate is granted in respect of debts and securities of a deceased person and does not determine title to other property.",
+      },
+      {
+        question: "On what grounds can a will be challenged?",
+        answer:
+          "Common grounds include want of testamentary capacity, absence of due execution or attestation, undue influence or coercion, fraud, and the existence of suspicious circumstances surrounding execution which the propounder of the will is required to dispel. The burden and standard applicable vary with the ground raised and with the circumstances established.",
+      },
+      {
+        question: "What is a family settlement and does it require registration?",
+        answer:
+          "A family settlement is an arrangement among family members resolving competing claims to property, generally with the object of preserving family harmony. Where the instrument itself creates or transfers rights in immovable property it ordinarily requires registration, whereas a memorandum merely recording an arrangement already effected may stand differently. The distinction is one of substance rather than of the title given to the document.",
+      },
+      {
+        question: "Can a private trust be used for succession planning in India?",
+        answer:
+          "Private trusts are recognised under the Indian Trusts Act, 1882 and are used to hold and transmit family assets, including for continuity of control, provision for beneficiaries over time, and management during incapacity. Tax treatment differs according to the nature of the trust and its terms, and transfer of assets into trust carries its own consequences, which are assessed before the structure is settled.",
+      },
+      {
+        question: "Can a person resident outside India inherit property in India?",
+        answer:
+          "Persons resident outside India may inherit immovable property in India, subject to the exchange control framework, which regulates acquisition, holding, transfer and repatriation, and which treats agricultural land, plantation property and farmhouses differently from other immovable property. Repatriation of proceeds is subject to the conditions and limits applicable under that framework.",
+      },
+      {
+        question: "Is there estate duty or inheritance tax in India?",
+        answer:
+          "India does not presently levy estate duty or inheritance tax. Other tax consequences may nonetheless arise in connection with wealth transfer, including in respect of gifts, income attribution between family members, and capital gains on subsequent disposal of inherited assets, and these are assessed as part of planning.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "corporate-ma-private-equity-capital-markets",
+      "tax-advisory-litigation",
+      "litigation-dispute-resolution",
+      "real-estate-infrastructure-energy",
+    ],
+    breadcrumbLabel: "Private Clients & Family Wealth",
+  },
+
+  "aerospace-defence-regulatory-advisory": {
+    slug: "aerospace-defence-regulatory-advisory",
+    seo: {
+      title: "Aerospace & Defence — Regulatory & Advisory | Sagar & Sagar",
+      description:
+        "Defence procurement and offsets, industrial licensing, export controls, civil aviation and drone regulation, and contract disputes with public authorities.",
+      primaryKeyword: "defence sector lawyer India",
+      secondaryKeywords: [
+        "defence procurement legal advisory India",
+        "defence offset obligations counsel",
+        "SCOMET export control licensing",
+        "defence industrial licensing arms rules",
+        "civil aviation regulatory lawyer DGCA",
+        "drone rules compliance India",
+        "aircraft leasing legal India",
+        "defence contract dispute MoD",
+        "blacklisting debarment challenge",
+        "space sector regulatory advisory India",
+      ],
+    },
+    serviceType: "Aerospace and Defence Regulatory and Advisory",
+    h1: "Aerospace & Defence — Regulatory & Advisory",
+    answerFirst:
+      "Aerospace and defence practice concerns the regulatory framework applicable to defence procurement and production, aviation operations, and the movement of controlled goods and technology. Sagar & Sagar Law Offices advises on defence acquisition and offset requirements, industrial licensing and foreign investment conditions applicable to the sector, export control authorisation, and civil aviation and unmanned aircraft regulation, and acts in contractual and administrative disputes involving public sector purchasers. Work in this practice is regulatory, contractual and advisory in nature.",
+    overview: [
+      "Aerospace and defence in India is characterised by a public sector purchaser, a licensed manufacturing base, and controlled movement of goods and technology across borders. Each of these carries its own framework. Procurement follows a codified acquisition procedure with defined categories, indigenous content requirements and offset obligations. Manufacture of specified items requires industrial licensing. Export of controlled items requires authorisation under the foreign trade framework. Foreign participation is subject to sectoral investment conditions.",
+      "The practice at Sagar & Sagar Law Offices operates across the regulatory and contractual dimensions of this sector. Work includes advice on participation in defence procurement, structuring of joint ventures and technology arrangements with foreign partners, licensing and authorisation applications, compliance with offset and indigenisation requirements, and representation in disputes arising from contracts with public authorities, including challenges to tender decisions and to debarment.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Defence procurement and acquisition",
+        intro: "Participation in acquisition by the armed forces and defence establishments.",
+        items: [
+          "Advice on the acquisition procedure applicable to a proposed procurement",
+          "Advice on acquisition categories and on the eligibility conditions attaching to each",
+          "Advice on indigenous content requirements and on their computation",
+          "Review of requests for information and requests for proposal",
+          "Advice on bid eligibility, consortium arrangements and lead bidder responsibilities",
+          "Preparation and review of bid documentation and undertakings",
+          "Advice on integrity pact obligations and on agent and representative restrictions",
+          "Advice on evaluation, negotiation and contract award processes",
+          "Review and negotiation of defence procurement contracts",
+          "Advice on performance obligations, delivery, acceptance and warranty provisions",
+          "Advice on liquidated damages, penalties and risk purchase provisions",
+        ],
+      },
+      {
+        heading: "Offsets and indigenisation",
+        intro: "Obligations arising from and connected to procurement.",
+        items: [
+          "Advice on applicability of offset obligations to a procurement",
+          "Advice on eligible offset avenues and on the discharge of obligations",
+          "Review and negotiation of offset contracts and undertakings",
+          "Advice on offset banking and on transfer of offset credits",
+          "Advice on selection and engagement of Indian offset partners",
+          "Advice on documentation and reporting for discharge of offset obligations",
+          "Advice on consequences of failure to discharge offset obligations",
+          "Advice on indigenisation programmes and on domestic sourcing requirements",
+        ],
+      },
+      {
+        heading: "Licensing, approvals and foreign investment",
+        intro: "Authorisations required to establish and operate in the sector.",
+        items: [
+          "Advice on industrial licensing requirements for manufacture of defence items",
+          "Applications for industrial licences and for amendments to them",
+          "Advice on licensing under arms legislation and the rules made under it",
+          "Advice on foreign direct investment conditions applicable to the defence sector",
+          "Advice on entry route, approval requirements and conditions attaching to foreign investment",
+          "Advice on security clearance requirements and on the process for obtaining them",
+          "Advice on registration and empanelment with defence procurement organisations",
+          "Advice on establishment of manufacturing operations, including approvals and land matters",
+        ],
+      },
+      {
+        heading: "Export controls and controlled technology",
+        intro: "Movement of controlled goods, software and technology.",
+        items: [
+          "Advice on classification of items against the applicable control list",
+          "Applications for export authorisation for controlled items",
+          "Advice on end-use and end-user documentation requirements",
+          "Advice on obligations under legislation prohibiting unlawful activities in relation to weapons of mass destruction and their delivery systems",
+          "Advice on India's participation in multilateral export control arrangements and its consequences",
+          "Advice on re-export, retransfer and intangible technology transfer",
+          "Advice on internal compliance programmes for export control",
+          "Advice on responses to enquiries and investigations concerning controlled exports",
+          "Advice on import authorisation for controlled items",
+        ],
+      },
+      {
+        heading: "Industrial collaboration and technology arrangements",
+        intro: "Arrangements between Indian and foreign participants.",
+        items: [
+          "Structuring of joint ventures in the defence and aerospace sector",
+          "Technology transfer and licensed production agreements",
+          "Advice on ownership and licensing of intellectual property in collaborative programmes",
+          "Teaming, consortium and subcontracting agreements",
+          "Supply chain and vendor agreements, including flow-down of prime contract obligations",
+          "Advice on confidentiality and security requirements in collaborative arrangements",
+          "Advice on maintenance, repair and overhaul arrangements",
+          "Advice on establishment of production and assembly facilities",
+        ],
+      },
+      {
+        heading: "Civil aviation regulation",
+        intro: "Regulatory framework applicable to aviation operations and infrastructure.",
+        items: [
+          "Advice on the framework governing aircraft, aerodromes and air operations",
+          "Advice on approvals, permits and certification requirements applicable to operators",
+          "Advice on obligations relating to aviation security",
+          "Advice on airport concession, tariff determination and economic regulation",
+          "Advice on aircraft acquisition, leasing and financing arrangements",
+          "Advice on registration and deregistration of aircraft and on repossession",
+          "Advice on the framework implementing international conventions relating to interests in aircraft objects",
+          "Advice on maintenance, repair and overhaul operations and their regulatory requirements",
+          "Representation in regulatory proceedings and appeals",
+        ],
+      },
+      {
+        heading: "Unmanned aircraft and emerging aerospace",
+        intro: "Newer areas within the sector's regulatory framework.",
+        items: [
+          "Advice on the regulatory framework applicable to unmanned aircraft systems",
+          "Advice on registration, pilot certification and airspace classification requirements",
+          "Advice on permissions for operations and on operational restrictions",
+          "Advice on manufacture, import and type certification of unmanned aircraft",
+          "Advice on the regulatory framework applicable to space activities and on authorisation requirements",
+          "Advice on participation by private entities in space sector activity",
+          "Advice on data, imagery and remote sensing regulation",
+        ],
+      },
+      {
+        heading: "Disputes involving public sector purchasers",
+        intro: "Contentious work arising from contracts and administrative decisions.",
+        items: [
+          "Challenges to tender conditions, evaluation and award of contract",
+          "Writ proceedings against administrative decisions of procurement authorities",
+          "Challenges to blacklisting, debarment and suspension of business dealings",
+          "Disputes concerning performance, delay and termination of defence contracts",
+          "Claims relating to price variation, change in scope and change in law",
+          "Arbitration under contracts with public sector purchasers",
+          "Disputes concerning encashment of bank guarantees and performance securities",
+          "Advice and representation in enquiries and investigations concerning procurement",
+        ],
+      },
+    ],
+    forums: [
+      "Ministry of Defence and its acquisition and production organisations",
+      "Department for Promotion of Industry and Internal Trade, in industrial licensing",
+      "Directorate General of Foreign Trade, in export authorisation",
+      "Directorate General of Civil Aviation",
+      "Bureau of Civil Aviation Security",
+      "Airports Economic Regulatory Authority",
+      "Authority responsible for authorisation of space sector activity",
+      "High Courts, in writ jurisdiction over administrative and procurement decisions",
+      "Arbitral tribunals constituted under public sector contracts",
+      "Commercial Courts and Commercial Divisions",
+      "Supreme Court of India",
+    ],
+    whoWeActFor: [
+      "Indian manufacturers and suppliers in the defence and aerospace sector",
+      "Foreign original equipment manufacturers participating in Indian procurement",
+      "Joint ventures established for defence production",
+      "Indian offset partners and subcontractors",
+      "Micro, small and medium enterprises in the defence supply chain",
+      "Aviation operators, lessors and service providers",
+      "Maintenance, repair and overhaul operators",
+      "Unmanned aircraft manufacturers and operators",
+      "Entities in the private space sector",
+      "Investors in aerospace and defence businesses",
+    ],
+    approach: [
+      {
+        title: "Regulatory position established before commercial commitment.",
+        body: "Licensing, investment conditions and export authorisation determine whether an arrangement is capable of performance. These are assessed before documentation is settled.",
+      },
+      {
+        title: "Prime contract obligations traced through the supply chain.",
+        body: "Offset, indigenous content and security obligations imposed on a prime contractor are frequently discharged through subcontractors. Flow-down of those obligations is drafted deliberately rather than by incorporation.",
+      },
+      {
+        title: "Administrative decisions treated as reviewable.",
+        body: "Tender decisions, debarment and suspension are administrative acts subject to standards of fairness and reasonableness, and are assessed on that basis rather than accepted as final.",
+      },
+      {
+        title: "Scope confined to regulatory and contractual matters.",
+        body: "The practice concerns licensing, contracting, compliance and dispute resolution. It does not extend to technical, operational or capability matters.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What governs defence procurement in India?",
+        answer:
+          "Defence acquisition by the Ministry of Defence is conducted under a codified acquisition procedure which sets out categories of acquisition, eligibility conditions, indigenous content requirements, evaluation processes and contracting provisions. Separate provisions apply to revenue procurement. The procedure is revised periodically, and the version applicable to a particular procurement is that specified in the tender documentation.",
+      },
+      {
+        question: "What are defence offsets?",
+        answer:
+          "Offsets are obligations imposed on a foreign vendor in specified procurements to undertake or facilitate qualifying activity in India, such as sourcing from Indian entities, investment or transfer of technology, to a value determined as a proportion of the contract. The avenues through which offsets may be discharged, and the documentation required to establish discharge, are prescribed by the applicable policy.",
+      },
+      {
+        question: "Is an industrial licence required to manufacture defence items?",
+        answer:
+          "Manufacture of items specified in the applicable notifications requires an industrial licence under the framework governing industrial licensing, and licensing under arms legislation applies to specified categories of arms and ammunition. Whether a licence is required depends on the classification of the item proposed to be manufactured, which is assessed against the notified lists.",
+      },
+      {
+        question: "Can foreign companies invest in Indian defence manufacturing?",
+        answer:
+          "Foreign direct investment in the defence sector is permitted subject to sectoral conditions, with investment up to a specified proportion permitted under the automatic route and beyond that requiring government approval, subject to the conditions in force, including those relating to security. The applicable limits and conditions should be verified against the policy in force at the time of the investment.",
+      },
+      {
+        question: "What is the SCOMET list?",
+        answer:
+          "The control list applicable to special chemicals, organisms, materials, equipment and technologies specifies items whose export is restricted and requires authorisation under the foreign trade framework. Exporters are required to classify items against the list and, where an item is listed, to obtain authorisation before export, supported by end-use and end-user documentation.",
+      },
+      {
+        question: "Can a blacklisting or debarment decision be challenged?",
+        answer:
+          "Decisions suspending or debarring an entity from business dealings are administrative decisions and have been subjected to judicial review on grounds including absence of a show cause notice, denial of hearing, disproportionality of the period imposed and absence of reasons. Challenges are ordinarily brought in writ jurisdiction before a High Court.",
+      },
+      {
+        question: "What regulates drone operations in India?",
+        answer:
+          "Operation of unmanned aircraft is governed by rules made under the aviation legislation, which provide for registration of aircraft, certification of remote pilots, classification of airspace into zones, type certification of aircraft, and restrictions on operations. Requirements vary with the category and weight of the aircraft and with the nature of the operation proposed.",
+      },
+      {
+        question: "Are private entities permitted to undertake space activities in India?",
+        answer:
+          "Participation by private entities in space sector activity is permitted subject to authorisation by the designated authority and to the conditions applicable to the activity concerned, with policy in this area having been liberalised in recent years including in relation to foreign investment. The framework continues to develop, and the position should be verified against the policy and authorisation requirements in force.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "regulatory-competition-compliance",
+      "corporate-ma-private-equity-capital-markets",
+      "arbitration-mediation-adr",
+      "litigation-dispute-resolution",
+    ],
+    breadcrumbLabel: "Aerospace & Defence — Regulatory & Advisory",
+  },
+
+  "employment-labour-law": {
+    slug: "employment-labour-law",
+    seo: {
+      title: "Employment & Labour Law | Sagar & Sagar Law Offices",
+      description:
+        "Employment contracts, termination and retrenchment, POSH compliance and inquiries, industrial disputes, social security and workplace investigations.",
+      primaryKeyword: "employment lawyer India",
+      secondaryKeywords: [
+        "labour law compliance India",
+        "POSH Act internal committee advisory",
+        "termination retrenchment legal advice",
+        "industrial disputes act proceedings",
+        "employment contract drafting India",
+        "non-compete enforceability India",
+        "workplace investigation counsel",
+        "EPF ESI compliance advisory",
+        "labour codes implementation advice",
+        "gig worker social security India",
+      ],
+    },
+    serviceType: "Employment and Labour Law",
+    h1: "Employment & Labour Law",
+    answerFirst:
+      "Employment and labour practice concerns the relationship between employers and those who work for them, including engagement, terms of service, workplace conduct, termination and collective relations. Sagar & Sagar Law Offices advises on employment documentation and policies, statutory compliance under central and state labour legislation, obligations relating to workplace harassment, and the conduct of disciplinary and separation processes, and represents parties in industrial disputes and employment proceedings before labour authorities, tribunals and courts. Work covers advisory, transactional and contentious matters.",
+    overview: [
+      "Indian labour regulation is layered. Central legislation establishes the framework for wages, industrial relations, social security and workplace conditions; state legislation and rules govern establishments, working hours and registration; and the protections available to a given individual depend substantially on whether that individual falls within the statutory definition of a workman, or of an employee, for the purpose of the provision concerned. Consolidation of central labour legislation into codes has been undertaken, with commencement and rulemaking proceeding at both central and state level.",
+      "The practice at Sagar & Sagar Law Offices addresses this framework as it applies day to day. Work includes drafting and review of employment documentation and internal policies, compliance advice across applicable central and state requirements, advice on restructuring and separation, conduct of workplace investigations, and representation in disputes with individual employees, groups of employees and unions. Where employment issues arise in a transaction, work is conducted with the firm's Corporate practice.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Employment documentation and policies",
+        intro: "Documents establishing and governing the employment relationship.",
+        items: [
+          "Drafting and review of employment contracts and appointment letters",
+          "Drafting of consultant, retainer and independent contractor agreements",
+          "Advice on classification of engagement and on the risks of misclassification",
+          "Drafting of confidentiality, invention assignment and intellectual property provisions",
+          "Advice on restrictive covenants, including non-solicitation and non-compete provisions, and on their enforceability",
+          "Drafting of garden leave, notice and transition provisions",
+          "Employee handbooks, codes of conduct and internal policies",
+          "Advice on remote and hybrid working arrangements and their documentation",
+          "Advice on secondment, deputation and group employment arrangements",
+          "Executive service agreements and separation agreements",
+        ],
+      },
+      {
+        heading: "Statutory compliance",
+        intro: "Obligations arising under central and state labour legislation.",
+        items: [
+          "Advice on registration and licensing requirements applicable to establishments",
+          "Advice on wages, minimum wages, payment obligations and permissible deductions",
+          "Advice on working hours, leave, holidays and overtime requirements",
+          "Advice on bonus and gratuity obligations",
+          "Advice on provident fund and employees' state insurance obligations, including in respect of international workers",
+          "Advice on maternity benefit obligations and on associated workplace requirements",
+          "Advice on obligations concerning contract labour and on principal employer liability",
+          "Advice on obligations applicable to gig and platform-based work",
+          "Advice on obligations under occupational safety and working conditions requirements",
+          "Compliance audits and remediation of historical non-compliance",
+          "Advice on the consolidation of central labour legislation and on transition to the codes",
+          "Representation in inspections and proceedings before labour authorities",
+        ],
+      },
+      {
+        heading: "Workplace harassment and conduct",
+        intro: "Obligations concerning conduct within the workplace.",
+        items: [
+          "Advice on obligations under legislation concerning sexual harassment of women at workplace",
+          "Constitution of internal committees and advice on their composition",
+          "Drafting of policies and training material on workplace harassment",
+          "Advice on the conduct of inquiries and on procedural requirements",
+          "Acting as or advising external members and presiding officers, as appropriate",
+          "Advice on inquiry findings, recommendations and their implementation",
+          "Advice on appeals from inquiry findings",
+          "Advice on annual reporting and filing obligations",
+          "Advice on complaints falling outside that framework, including under general disciplinary policy",
+          "Advice on prevention of discrimination and on equal opportunity obligations",
+        ],
+      },
+      {
+        heading: "Disciplinary process, investigation and termination",
+        intro: "Processes leading to separation or sanction.",
+        items: [
+          "Advice on standards of conduct and on grounds for disciplinary action",
+          "Drafting of charge sheets and show cause notices",
+          "Advice on the conduct of domestic inquiries and on principles of natural justice",
+          "Conduct of workplace investigations into misconduct, fraud and policy breach",
+          "Advice on suspension pending inquiry",
+          "Advice on proportionality of punishment and on documentation of decisions",
+          "Advice on termination for cause and on termination on notice",
+          "Advice on retrenchment, including notice, compensation and approval requirements where applicable",
+          "Advice on closure of establishments and on the requirements attaching to it",
+          "Negotiation and documentation of separation and settlement arrangements",
+          "Defence of claims arising from termination",
+        ],
+      },
+      {
+        heading: "Industrial relations and collective matters",
+        intro: "Relations with unions and groups of employees.",
+        items: [
+          "Advice on recognition of trade unions and on negotiation frameworks",
+          "Advice on and negotiation of settlements and collective agreements",
+          "Advice on strikes, lock-outs and other industrial action",
+          "Advice on unfair labour practice allegations",
+          "Conciliation proceedings before labour authorities",
+          "Representation before Labour Courts and Industrial Tribunals",
+          "Advice on standing orders and on their certification and modification",
+          "Advice on management of workforce reduction in unionised establishments",
+        ],
+      },
+      {
+        heading: "Employment aspects of transactions and restructuring",
+        intro: "Employment issues arising from corporate activity.",
+        items: [
+          "Employment due diligence in acquisitions and investments",
+          "Advice on transfer of employees on transfer of an undertaking",
+          "Advice on continuity of service, benefits and accrued entitlements",
+          "Advice on harmonisation of terms following acquisition",
+          "Advice on employment aspects of outsourcing arrangements",
+          "Advice on workforce restructuring, redundancy and reorganisation",
+          "Advice on employment obligations in insolvency and on treatment of workmen's dues",
+          "Advice on employment aspects of business closure and site consolidation",
+        ],
+      },
+      {
+        heading: "Employee benefits and incentives",
+        intro: "Compensation arrangements beyond salary.",
+        items: [
+          "Advice on structuring of employee stock option and share-based incentive plans",
+          "Advice on the regulatory framework applicable to share-based plans in listed and unlisted companies",
+          "Drafting of plan documentation, grant letters and trust arrangements where used",
+          "Advice on treatment of incentives on separation and on change of control",
+          "Advice on deferred compensation and retention arrangements",
+          "Advice on benefits for internationally mobile employees",
+        ],
+      },
+      {
+        heading: "Individual employment disputes",
+        intro: "Contentious matters between employer and individual.",
+        items: [
+          "Claims concerning wrongful and illegal termination",
+          "Claims concerning wages, benefits and terminal dues",
+          "Proceedings concerning gratuity and provident fund entitlements",
+          "Disputes concerning enforcement of restrictive covenants",
+          "Proceedings arising from harassment complaints and inquiry findings",
+          "Disputes concerning confidential information and misuse of employer property",
+          "Writ proceedings in employment matters, where available",
+          "Defence of employers in employment claims",
+        ],
+      },
+    ],
+    forums: [
+      "Labour Courts and Industrial Tribunals",
+      "Conciliation officers and labour authorities under applicable legislation",
+      "Controlling and appellate authorities under gratuity legislation",
+      "Employees' Provident Fund Organisation and authorities under provident fund legislation",
+      "Employees' State Insurance Corporation authorities",
+      "Internal committees and local committees constituted under harassment legislation",
+      "Inspectors and authorities under state shops and establishments legislation",
+      "Civil Courts and Commercial Courts, in contractual employment disputes",
+      "High Courts, in writ and appellate jurisdiction",
+      "Supreme Court of India",
+    ],
+    whoWeActFor: [
+      "Companies and establishments across sectors",
+      "Boards, human resources functions and in-house counsel",
+      "Multinational employers operating in India",
+      "Startups establishing employment frameworks",
+      "Platform and aggregator businesses",
+      "Employers in unionised establishments",
+      "Internal committees constituted under harassment legislation",
+      "Senior executives in respect of their engagement and separation",
+      "Parties to transactions with employment implications",
+    ],
+    approach: [
+      {
+        title: "Coverage determined before advice is given.",
+        body: "Whether an individual is a workman, an employee or a contractor for the purpose of a given provision determines what protection applies. That question is settled first.",
+      },
+      {
+        title: "Process documented as it is conducted.",
+        body: "Disciplinary and separation decisions are tested on the record made at the time. Notices, inquiry records and decisions are prepared on the footing that they will be produced in evidence.",
+      },
+      {
+        title: "Central and state requirements addressed together.",
+        body: "Establishments are subject to both. Advice identifies the applicable state framework alongside central obligations rather than treating either in isolation.",
+      },
+      {
+        title: "Sensitivity in investigations.",
+        body: "Workplace investigations involve individuals' reputations and employment. They are conducted with attention to confidentiality, fairness and the position of all parties involved.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Are non-compete clauses enforceable in India after employment ends?",
+        answer:
+          "Indian contract law treats agreements in restraint of trade as void, subject to the exception provided in the statute, and post-employment restrictions on competing have generally not been enforced by Indian courts. Restrictions operating during employment, and obligations protecting confidential information and restraining solicitation, stand on a different footing and have been enforced in appropriate cases.",
+      },
+      {
+        question: "Who is a workman and why does it matter?",
+        answer:
+          "Industrial relations legislation applies specified protections to persons falling within the statutory definition of a workman, which turns on the nature of the duties performed rather than on designation, and excludes persons employed mainly in a managerial or administrative capacity. Whether an individual is a workman determines the availability of protections relating to termination, retrenchment and access to industrial adjudication.",
+      },
+      {
+        question: "What is required before terminating an employee in India?",
+        answer:
+          "Requirements depend on whether the individual falls within statutory protection, on the applicable state legislation, on the size and nature of the establishment, and on the terms of the contract. Where statutory protection applies, notice, compensation and in some cases prior permission may be required, and misconduct-based termination ordinarily requires a disciplinary process conducted in accordance with principles of natural justice.",
+      },
+      {
+        question: "What obligations does an employer have under the POSH framework?",
+        answer:
+          "Legislation concerning sexual harassment of women at workplace requires employers to constitute an internal committee in the manner prescribed, to formulate and publicise a policy, to organise awareness and training, to conduct inquiries in accordance with the procedure specified, to act upon recommendations, and to file annual reports. Obligations apply irrespective of the sector in which the employer operates.",
+      },
+      {
+        question: "Who must be on an internal committee?",
+        answer:
+          "The legislation prescribes the composition of the internal committee, including a presiding officer who is a woman employed at a senior level, members from among employees, and a member drawn from a non-governmental organisation or association committed to the cause of women or familiar with issues relating to sexual harassment. Requirements as to the number of members and the proportion of women are set out in the statute.",
+      },
+      {
+        question: "Are the labour codes in force?",
+        answer:
+          "Central labour legislation has been consolidated into codes covering wages, industrial relations, social security, and occupational safety and working conditions. Implementation involves both commencement and the framing of rules by the central and state governments, and the position has evolved. Employers should verify the commencement and rule position applicable to their establishments and to the states in which they operate.",
+      },
+      {
+        question: "What are an employer's obligations to gig and platform workers?",
+        answer:
+          "Social security legislation contemplates coverage for gig and platform workers, including through schemes funded in part by contributions from aggregators, with the framework depending on notification and rulemaking. Separately, classification of platform-based engagement remains significant, since misclassification may attract obligations applicable to employment.",
+      },
+      {
+        question: "What happens to employees when a business is transferred?",
+        answer:
+          "Where an undertaking is transferred, employment legislation provides for the position of workmen, including in relation to continuity of service, terms of employment and compensation, subject to the conditions specified. In practice, treatment depends on the transaction structure, since a share acquisition leaves employment relationships undisturbed while a business transfer requires the position of each employee to be addressed.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "corporate-ma-private-equity-capital-markets",
+      "litigation-dispute-resolution",
+      "esg-sustainability",
+      "regulatory-competition-compliance",
+    ],
+    breadcrumbLabel: "Employment & Labour Law",
+  },
+
+  "esg-sustainability": {
+    slug: "esg-sustainability",
+    seo: {
+      title: "ESG & Sustainability | Sagar & Sagar Law Offices",
+      description:
+        "Sustainability reporting, CSR compliance, extended producer responsibility, carbon markets, green finance and greenwashing exposure.",
+      primaryKeyword: "ESG compliance lawyer India",
+      secondaryKeywords: [
+        "BRSR reporting advisory India",
+        "CSR compliance Section 135",
+        "extended producer responsibility legal",
+        "carbon credit trading scheme India",
+        "green bond framework SEBI",
+        "greenwashing guidelines compliance",
+        "ESG due diligence transactions",
+        "supply chain human rights due diligence India",
+        "sustainability disclosure advisory",
+        "environmental compliance advisory India",
+      ],
+    },
+    serviceType: "ESG and Sustainability",
+    h1: "ESG & Sustainability",
+    answerFirst:
+      "ESG and sustainability practice concerns the legal obligations arising from environmental, social and governance requirements, including mandatory disclosure, environmental compliance, responsible sourcing and the governance standards applicable to boards. Sagar & Sagar Law Offices advises on sustainability reporting obligations applicable to listed entities, corporate social responsibility requirements under the Companies Act, 2013, extended producer responsibility and waste management obligations, carbon and green finance frameworks, and exposure arising from sustainability claims. Work covers disclosure, compliance, transactional diligence and defence of claims.",
+    overview: [
+      "ESG in India has moved from voluntary commitment to enforceable obligation across several fronts simultaneously. Listed entities above specified thresholds are required to report on sustainability matters in a prescribed format, with assurance requirements applying to specified indicators. Corporate social responsibility spending is a statutory obligation with consequences for unspent amounts. Producers of specified goods carry extended producer responsibility obligations for the waste their products generate. Energy conservation legislation now contemplates carbon credit trading. Claims made about environmental attributes attract consumer protection scrutiny.",
+      "Alongside domestic requirements, Indian businesses supplying international markets increasingly face sustainability due diligence and reporting requirements imposed by foreign purchasers and regimes, which operate as contractual and commercial obligations even where they do not apply as law in India. The practice at Sagar & Sagar Law Offices addresses both dimensions: the domestic statutory framework, and the obligations that reach Indian businesses through supply chains and transactions.",
+    ],
+    scopeOfWork: [
+      {
+        heading: "Sustainability reporting and disclosure",
+        intro: "Mandatory and voluntary reporting on ESG matters.",
+        items: [
+          "Advice on applicability of sustainability reporting requirements to a listed entity",
+          "Advice on the format, content and scope of prescribed sustainability disclosure",
+          "Advice on indicators subject to assurance and on the assurance process",
+          "Advice on value chain disclosure requirements and on their scope",
+          "Review of draft disclosures for accuracy and legal exposure",
+          "Advice on consistency between sustainability disclosure and other public statements",
+          "Advice on governance of the reporting process and on board responsibility for it",
+          "Advice on voluntary reporting frameworks and on their legal consequences",
+          "Advice on liability arising from inaccurate or misleading disclosure",
+        ],
+      },
+      {
+        heading: "Corporate social responsibility",
+        intro: "Statutory obligations concerning expenditure on specified activities.",
+        items: [
+          "Advice on applicability of corporate social responsibility obligations",
+          "Advice on computation of the amount required to be spent",
+          "Advice on permissible activities and on activities excluded from the framework",
+          "Advice on implementation modalities, including through implementing agencies",
+          "Advice on ongoing projects and on treatment of unspent amounts",
+          "Advice on transfer of unspent amounts to specified funds and accounts",
+          "Drafting of policy, committee terms of reference and implementation agreements",
+          "Advice on reporting, disclosure and impact assessment requirements",
+          "Advice on consequences of non-compliance",
+        ],
+      },
+      {
+        heading: "Environmental compliance and producer responsibility",
+        intro: "Obligations concerning environmental impact and product lifecycle.",
+        items: [
+          "Advice on environmental clearance and consent requirements applicable to operations",
+          "Advice on conditions attaching to clearances and on compliance reporting",
+          "Advice on extended producer responsibility obligations for specified categories of waste",
+          "Advice on registration, targets and certificate mechanisms under waste management frameworks",
+          "Advice on obligations concerning plastic packaging, electronic waste, batteries and other notified categories",
+          "Advice on recycling, collection and take-back arrangements and their documentation",
+          "Advice on hazardous waste handling and disposal obligations",
+          "Representation in proceedings before pollution control authorities and the environmental tribunal",
+          "Defence of proceedings alleging environmental non-compliance",
+          "Advice on environmental liability in acquisitions and site transfers",
+        ],
+      },
+      {
+        heading: "Carbon, energy and climate",
+        intro: "Obligations arising from energy and emissions regulation.",
+        items: [
+          "Advice on the framework governing carbon credit trading and on participation in it",
+          "Advice on energy efficiency obligations applicable to designated consumers",
+          "Advice on renewable purchase obligations and on compliance mechanisms",
+          "Advice on renewable energy procurement arrangements, including through open access",
+          "Advice on voluntary carbon market transactions and on associated documentation",
+          "Advice on emissions-related contractual commitments and their enforceability",
+          "Advice on climate-related disclosure and on associated exposure",
+          "Advice on cross-border carbon-related measures affecting exporters",
+        ],
+      },
+      {
+        heading: "Green and sustainable finance",
+        intro: "Financing arrangements with sustainability features.",
+        items: [
+          "Advice on issuance of green, social and sustainability-linked debt securities",
+          "Advice on the framework applicable to such instruments and on associated disclosure",
+          "Advice on use of proceeds, reporting and verification obligations",
+          "Advice on sustainability-linked loans and on key performance indicator structures",
+          "Advice on green deposit frameworks applicable to regulated lenders",
+          "Advice on exposure arising from failure to meet sustainability-linked targets",
+          "Advice on ESG considerations in fund documentation and investor commitments",
+        ],
+      },
+      {
+        heading: "Governance and board matters",
+        intro: "Governance dimension of ESG obligations.",
+        items: [
+          "Advice on board composition, independence and committee requirements",
+          "Advice on board oversight of sustainability matters and on delegation",
+          "Advice on vigil mechanisms and whistleblower arrangements",
+          "Advice on related party transaction governance",
+          "Advice on directors' duties in relation to sustainability commitments",
+          "Advice on remuneration linked to sustainability performance",
+          "Advice on stakeholder engagement obligations and grievance mechanisms",
+          "Advice on business responsibility policies and their implementation",
+        ],
+      },
+      {
+        heading: "Social, supply chain and human rights",
+        intro: "The social dimension, including obligations reaching businesses through supply chains.",
+        items: [
+          "Advice on responsible sourcing requirements imposed by customers and counterparties",
+          "Supply chain due diligence, including in relation to labour standards",
+          "Advice on supplier codes of conduct and on their contractual incorporation",
+          "Advice on audit rights, remediation and termination for supply chain non-compliance",
+          "Advice on obligations concerning child labour, forced labour and working conditions in supply chains",
+          "Advice on the interaction between domestic labour compliance and international due diligence expectations",
+          "Advice on community engagement, land and displacement issues in projects",
+          "Advice on accessibility, diversity and non-discrimination commitments",
+        ],
+      },
+      {
+        heading: "Greenwashing and sustainability claims",
+        intro: "Exposure arising from what a business says about itself.",
+        items: [
+          "Review of sustainability and environmental claims in advertising and packaging",
+          "Advice on substantiation required for environmental claims",
+          "Advice on guidance applicable to environmental claims in consumer communication",
+          "Advice on consistency between marketing claims and regulatory disclosure",
+          "Advice on exposure under consumer protection and securities law for misleading claims",
+          "Representation in proceedings concerning environmental claims",
+          "Advice on responding to third-party allegations of greenwashing",
+        ],
+      },
+      {
+        heading: "ESG in transactions",
+        intro: "Sustainability issues arising in corporate activity.",
+        items: [
+          "ESG due diligence in acquisitions and investments",
+          "Advice on environmental and social liabilities identified in diligence",
+          "Drafting of ESG representations, warranties, covenants and indemnities",
+          "Advice on ESG conditions imposed by investors and lenders",
+          "Advice on post-completion integration of ESG compliance",
+          "Advice on ESG considerations in financing documentation",
+        ],
+      },
+    ],
+    forums: [
+      "Securities and Exchange Board of India, in respect of listed entity disclosure",
+      "Ministry of Corporate Affairs, in respect of corporate social responsibility and governance",
+      "Central and State Pollution Control Boards",
+      "Ministry of Environment, Forest and Climate Change",
+      "National Green Tribunal",
+      "Bureau of Energy Efficiency and authorities administering carbon and energy efficiency frameworks",
+      "Central Consumer Protection Authority, in respect of environmental claims",
+      "Reserve Bank of India, in respect of green finance frameworks applicable to regulated lenders",
+      "High Courts and the Supreme Court of India",
+    ],
+    whoWeActFor: [
+      "Listed companies subject to sustainability reporting obligations",
+      "Companies subject to corporate social responsibility requirements",
+      "Manufacturers and producers with extended producer responsibility obligations",
+      "Exporters facing sustainability requirements in foreign markets",
+      "Energy and infrastructure businesses",
+      "Banks, non-banking financial companies and investors applying ESG criteria",
+      "Investment funds with sustainability mandates",
+      "Boards, audit committees and sustainability committees",
+      "Parties to transactions with ESG diligence requirements",
+    ],
+    approach: [
+      {
+        title: "Disclosure treated as a statement of legal consequence.",
+        body: "Sustainability reporting is a public statement capable of being relied upon and challenged. Draft disclosure is reviewed for accuracy and exposure, not only for completeness.",
+      },
+      {
+        title: "Domestic obligations distinguished from contractual ones.",
+        body: "Requirements reaching Indian businesses through customer contracts and foreign regimes operate differently from Indian statutory obligations. Advice identifies the source of each requirement and the consequence of breach.",
+      },
+      {
+        title: "Claims matched to substantiation.",
+        body: "Environmental claims are assessed against the evidence available to support them before publication, since substantiation is what is examined when a claim is challenged.",
+      },
+      {
+        title: "Governance addressed alongside substance.",
+        body: "Where a sustainability obligation exists, so does a question of who within the organisation is responsible for it. Committee structures, delegation and reporting lines are addressed as part of the compliance position.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Which companies must report on sustainability in India?",
+        answer:
+          "Sustainability reporting in a prescribed format applies to listed entities meeting the criteria specified by the securities regulator, based on market capitalisation, with the requirement having been extended in phases. Specified indicators are subject to assurance, and disclosure in respect of the value chain applies to entities meeting further criteria. Applicability should be confirmed against the requirements in force for the relevant reporting year.",
+      },
+      {
+        question: "What are the consequences of not spending the required CSR amount?",
+        answer:
+          "The Companies Act, 2013 provides for treatment of amounts remaining unspent, requiring transfer to a specified fund or, where the amount relates to an ongoing project, to a designated account within the period prescribed, with further consequences if it remains unspent thereafter. The framework provides for penalties in respect of contravention, and responsibility for compliance forms part of the duties of the board.",
+      },
+      {
+        question: "What is extended producer responsibility?",
+        answer:
+          "Extended producer responsibility places obligations on producers, importers and brand owners in respect of the waste generated by their products, including registration, collection and recycling targets, and reporting. It applies to notified categories, which include plastic packaging, electronic waste and batteries. Compliance is generally evidenced through certificate mechanisms administered under the applicable rules.",
+      },
+      {
+        question: "Is carbon trading regulated in India?",
+        answer:
+          "Energy conservation legislation provides for a carbon credit trading scheme, with the framework, obligated entities and trading arrangements established through subordinate instruments. The scheme has been developed in phases. Separately, participation in voluntary carbon markets is undertaken on a contractual basis, with its own documentation and verification considerations.",
+      },
+      {
+        question: "What is greenwashing exposure?",
+        answer:
+          "Greenwashing refers to environmental or sustainability claims that are inaccurate, unsubstantiated or misleading. Exposure in India arises principally under consumer protection law in respect of misleading advertisements and unfair trade practices, under securities law where claims appear in disclosure by listed entities, and contractually where sustainability representations are given. Guidance has been issued on substantiation of environmental claims in consumer communication.",
+      },
+      {
+        question: "Do foreign sustainability requirements apply to Indian companies?",
+        answer:
+          "Foreign sustainability due diligence and reporting regimes generally do not apply directly as law in India, but they reach Indian businesses through the contracts of customers subject to them, and through market access measures affecting specified exports. The obligation is therefore commonly contractual or commercial rather than statutory, which affects both the standard applicable and the consequence of failure.",
+      },
+      {
+        question: "What does ESG due diligence in a transaction cover?",
+        answer:
+          "ESG due diligence typically examines environmental clearances and compliance history, waste and producer responsibility obligations, labour and workplace compliance, supply chain arrangements, governance structures and board processes, sustainability disclosure made publicly, and any pending proceedings or allegations. Findings are addressed through price, conditions, warranties, indemnities or post-completion covenants.",
+      },
+      {
+        question: "Who within a company is responsible for ESG compliance?",
+        answer:
+          "Responsibility varies with the obligation. Corporate social responsibility requirements contemplate a committee of the board where applicable; sustainability reporting is approved as part of the annual disclosure of a listed entity; environmental compliance obligations attach to occupiers and to persons in charge of operations. Allocation of responsibility internally is itself a governance matter and is ordinarily documented.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "regulatory-competition-compliance",
+      "corporate-ma-private-equity-capital-markets",
+      "real-estate-infrastructure-energy",
+      "employment-labour-law",
+    ],
+    breadcrumbLabel: "ESG & Sustainability",
   },
 };
