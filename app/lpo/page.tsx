@@ -12,6 +12,7 @@ import {
   lpoContactPointSchema,
   lpoServiceSchema,
 } from "@/lib/schema";
+import { getInsightsLinkingTo } from "@/lib/insights";
 import * as lpo from "@/content/lpo";
 
 export const metadata: Metadata = {
@@ -53,6 +54,8 @@ function ServiceNote({ note }: { note: string }) {
 }
 
 export default function LpoPage() {
+  const relatedInsights = getInsightsLinkingTo("/lpo");
+
   return (
     <>
       <JsonLd data={lpoServiceSchema()} />
@@ -269,6 +272,29 @@ export default function LpoPage() {
             <FaqAccordion items={lpo.faqs} />
           </div>
         </section>
+
+        {relatedInsights.length > 0 && (
+          <>
+            <SectionRule className="my-14" />
+            <section aria-labelledby="related-insights-heading">
+              <h2 id="related-insights-heading" className="font-serif text-2xl text-ink">
+                Related Insights
+              </h2>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {relatedInsights.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/insights/${post.slug}`}
+                      className="text-ink underline decoration-line underline-offset-4 hover:text-accent"
+                    >
+                      {post.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
 
         <SectionRule className="my-14" />
 

@@ -137,16 +137,16 @@ export function getInsight(slug: string): InsightPost | null {
   };
 }
 
-// Posts whose raw body links to /practice-areas/{slug}, for the practice
-// page's reciprocal "Related Insights" block. A link, not a mention, is
-// required — this only matches actual markdown link targets.
-export function getInsightsLinkingToPracticeArea(slug: string): InsightSummary[] {
-  const target = `/practice-areas/${slug}`;
+// Posts whose raw body links to the given path, for a page's reciprocal
+// "Related Insights" block. A link, not a mention, is required — this only
+// matches actual markdown link targets. Used for both /practice-areas/{slug}
+// and other standing pages (e.g. /lpo) that anchor an Insights cluster.
+export function getInsightsLinkingTo(targetPath: string): InsightSummary[] {
   return readSlugs()
     .filter((postSlug) => {
       const raw = fs.readFileSync(path.join(INSIGHTS_DIR, `${postSlug}.mdx`), "utf8");
       const { content } = matter(raw);
-      return content.includes(`](${target}/`) || content.includes(`](${target})`);
+      return content.includes(`](${targetPath}/`) || content.includes(`](${targetPath})`);
     })
     .map((postSlug) => {
       const raw = fs.readFileSync(path.join(INSIGHTS_DIR, `${postSlug}.mdx`), "utf8");
@@ -161,4 +161,8 @@ export function getInsightsLinkingToPracticeArea(slug: string): InsightSummary[]
       };
     })
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+}
+
+export function getInsightsLinkingToPracticeArea(slug: string): InsightSummary[] {
+  return getInsightsLinkingTo(`/practice-areas/${slug}`);
 }
