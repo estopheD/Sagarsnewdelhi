@@ -70,17 +70,42 @@ export default function ContactPage() {
                       </dd>
                     </div>
                   )}
-                  {office.email && (
-                    <div className="flex gap-x-2">
+                </dl>
+
+                {office.partnerContact && (
+                  <div className="mt-4 border border-accent bg-paper-raised px-4 py-3">
+                    <p className="text-xs uppercase tracking-wide text-accent">
+                      Partner contact
+                    </p>
+                    <a
+                      href={`tel:${office.partnerContact.number}`}
+                      className="mt-1 block font-serif text-lg text-ink hover:text-accent"
+                    >
+                      {office.partnerContact.number}
+                    </a>
+                    <p className="mt-0.5 text-xs text-ink-muted">
+                      {office.partnerContact.note}
+                    </p>
+                  </div>
+                )}
+
+                {office.emails && office.emails.length > 0 && (
+                  <dl className="mt-4 space-y-1 text-sm">
+                    <div className="flex flex-wrap gap-x-2">
                       <dt className="text-ink-muted">Email:</dt>
-                      <dd>
-                        <a href={`mailto:${office.email}`} className="text-accent hover:text-accent-hover">
-                          {office.email}
-                        </a>
+                      <dd className="flex flex-wrap gap-x-1">
+                        {office.emails.map((email, i) => (
+                          <span key={email}>
+                            <a href={`mailto:${email}`} className="text-accent hover:text-accent-hover">
+                              {email}
+                            </a>
+                            {i < office.emails!.length - 1 && ","}
+                          </span>
+                        ))}
                       </dd>
                     </div>
-                  )}
-                </dl>
+                  </dl>
+                )}
               </div>
             ))}
           </div>

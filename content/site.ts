@@ -21,7 +21,10 @@ export type Office = {
   region: string;
   postalCode?: string;
   phone?: string;
-  email?: string;
+  // Highlighted direct line, rendered distinctly from the general office
+  // phone since it reaches a partner rather than the office switchboard.
+  partnerContact?: { number: string; note: string };
+  emails?: string[];
   note?: string;
 };
 
@@ -42,6 +45,8 @@ export const offices: Office[] = [
     region: "Delhi",
     postalCode: "110092",
     phone: "+91-11-47543981",
+    partnerContact: { number: "+91-9810021846", note: "for direct inquiries" },
+    emails: ["info@sagarandsagar.in", "rajiv.sagar1@gmail.com"],
   },
   {
     id: "south-delhi",
@@ -63,7 +68,7 @@ export const offices: Office[] = [
     region: "Maharashtra",
     postalCode: "400001",
     phone: "+91-9561980557",
-    email: "navinarora21@gmail.com",
+    emails: ["navinarora21@gmail.com"],
   },
 ];
 
