@@ -62,6 +62,27 @@ const mdxComponents = {
     <th scope="col" className="py-2 pr-6 font-serif font-normal text-ink" {...props} />
   ),
   td: (props: React.ComponentProps<"td">) => <td className="py-2 pr-6" {...props} />,
+  // MDX only routes markdown-syntax elements (headings, `[text](url)` links,
+  // GFM tables) through this components map — literal HTML tags typed
+  // directly in an .mdx file compile straight to JSX and need their classes
+  // written out by hand at the call site (see the §VI comparison table in
+  // the FCRA post, which needs <th scope="row"> that GFM tables can't
+  // produce). This `a` mapping is what actually reaches every `[text](url)`
+  // link in every post, though, since those are markdown-syntax links.
+  a: ({ href, className, ...props }: React.ComponentProps<"a">) => {
+    const isContactLink = href === "/contact" || href === "/contact/";
+    return (
+      <a
+        href={href}
+        className={
+          isContactLink
+            ? "text-accent italic underline decoration-1 underline-offset-2 hover:text-accent-hover"
+            : "text-accent hover:text-accent-hover"
+        }
+        {...props}
+      />
+    );
+  },
 };
 
 export function PostLayout({ post }: { post: InsightPost }) {
