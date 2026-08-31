@@ -2945,9 +2945,12 @@ export const practiceAreaContent: Record<string, PracticeAreaContent> = {
     seo: {
       title: "Private Clients & Family Wealth | Sagar & Sagar Law Offices",
       description:
-        "Wills, succession planning, private trusts, probate, family settlements, family business governance and cross-border estate structuring.",
+        "Matrimonial, maintenance and alimony matters, wills, succession planning, private trusts, probate, family settlements, family business governance and cross-border estate structuring.",
       primaryKeyword: "succession planning lawyer India",
       secondaryKeywords: [
+        "alimony lawyer Delhi",
+        "maintenance and alimony India",
+        "divorce lawyer New Delhi",
         "will drafting advocate India",
         "probate letters of administration lawyer",
         "private trust formation India",
@@ -2969,6 +2972,16 @@ export const practiceAreaContent: Record<string, PracticeAreaContent> = {
       "The consequence is that an estate left without planning frequently devolves in a way the deceased did not intend, and often to the accompaniment of litigation between family members. The practice at Sagar & Sagar Law Offices addresses this on both sides: structuring undertaken during lifetime — wills, trusts, family arrangements and business governance documentation — and representation in contentious and non-contentious proceedings once an estate falls into administration or a family disagreement arises.",
     ],
     scopeOfWork: [
+      {
+        heading: "Matrimonial and maintenance matters",
+        intro: "Matters arising from marriage, separation and maintenance obligations.",
+        items: [
+          "Maintenance and alimony proceedings",
+          "Matrimonial proceedings",
+          "Custody and guardianship of children",
+          "Mutual consent divorce",
+        ],
+      },
       {
         heading: "Wills and testamentary documentation",
         intro: "Instruments directing how an estate is to devolve.",
@@ -3088,6 +3101,7 @@ export const practiceAreaContent: Record<string, PracticeAreaContent> = {
       },
     ],
     forums: [
+      "Family Courts constituted under the Family Courts Act, 1984",
       "District Courts and High Courts exercising testamentary and intestate jurisdiction",
       "Civil Courts, in partition, declaration and title proceedings",
       "Sub-Registrars, in registration of testamentary and settlement documentation",
@@ -3098,6 +3112,7 @@ export const practiceAreaContent: Record<string, PracticeAreaContent> = {
       "Supreme Court of India",
     ],
     whoWeActFor: [
+      "Individuals in matrimonial, maintenance and custody proceedings",
       "Individuals and families undertaking succession planning",
       "Promoters and founders of family-owned businesses",
       "Executors, administrators and trustees",

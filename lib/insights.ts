@@ -16,6 +16,12 @@ export type TocItem = {
   title: string;
 };
 
+export type InsightDirectContact = {
+  partnerNumber: string;
+  partnerNote: string;
+  emails: string[];
+};
+
 export type InsightFrontmatter = {
   title: string;
   // Overrides `title` in <title>/OG/Twitter tags only, for posts whose H1
@@ -30,6 +36,14 @@ export type InsightFrontmatter = {
   faqs?: InsightFaq[];
   priority?: number; // sitemap priority; defaults to 0.5
   placeholder?: boolean;
+  // Opt-in highlighted contact block rendered after the FAQ, for posts
+  // meant to convert a specific reader intent (e.g. family law enquiries)
+  // rather than the standard neutral /contact link alone. Rendered as
+  // real React, not raw HTML in the .mdx body — MDX's remark pipeline
+  // (remark-gfm's autolink in particular) re-processes bare emails/URLs
+  // typed as literal HTML in the source, which produces nested <a>/<p>
+  // elements and a hydration error. Keep it structured data instead.
+  directContact?: InsightDirectContact;
 };
 
 export type InsightSummary = InsightFrontmatter & {

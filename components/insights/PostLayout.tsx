@@ -100,6 +100,30 @@ export function PostLayout({ post }: { post: InsightPost }) {
           </div>
         </div>
       )}
+
+      {post.directContact && (
+        <div className="mt-10 border border-accent bg-paper-raised px-4 py-3">
+          <p className="text-xs uppercase tracking-wide text-accent">Partner contact</p>
+          <a
+            href={`tel:${post.directContact.partnerNumber}`}
+            className="mt-1 block font-serif text-lg text-ink hover:text-accent"
+          >
+            {post.directContact.partnerNumber}
+          </a>
+          <p className="mt-0.5 text-xs text-ink-muted">{post.directContact.partnerNote}</p>
+          <p className="mt-3 text-xs uppercase tracking-wide text-accent">Email</p>
+          <p className="mt-1 text-sm">
+            {post.directContact.emails.map((email, i) => (
+              <span key={email}>
+                <a href={`mailto:${email}`} className="text-accent hover:text-accent-hover">
+                  {email}
+                </a>
+                {i < post.directContact!.emails.length - 1 && <span className="text-ink-muted">, </span>}
+              </span>
+            ))}
+          </p>
+        </div>
+      )}
     </div>
   );
 
