@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/content/site";
 import { getAllInsights } from "@/lib/insights";
 import { practiceAreaContent } from "@/content/practice-areas/index";
-import { partnerContent } from "@/content/partners/index";
+import { getAllPartnerSlugs } from "@/lib/partners";
 
 export const dynamic = "force-static";
 
@@ -27,10 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  const partnerRoutes: MetadataRoute.Sitemap = Object.keys(partnerContent).map((slug) => ({
+  const partnerRoutes: MetadataRoute.Sitemap = getAllPartnerSlugs().map((slug) => ({
     url: `${SITE_URL}/about/${slug}`,
     changeFrequency: "yearly",
-    priority: 0.6,
+    priority: 0.8,
   }));
 
   const insightRoutes: MetadataRoute.Sitemap = getAllInsights().map((post) => ({

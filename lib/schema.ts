@@ -106,22 +106,41 @@ export function aboutPageSchema(leaders: { name: string; slug: string; role: str
   };
 }
 
-export function profilePageSchema(person: {
-  name: string;
-  jobTitle: string;
+export function partnerProfileSchema(partner: {
   slug: string;
-  knowsAbout: string[];
+  name: string;
+  honorific?: string;
+  role: string;
+  schemaPerson: { alumniOf: string[]; memberOf: string[]; knowsAbout: string[] };
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     mainEntity: {
       "@type": "Person",
-      name: person.name,
-      jobTitle: person.jobTitle,
+      "@id": `${SITE_URL}/about/${partner.slug}/#person`,
+      name: partner.name,
+      ...(partner.honorific ? { honorificPrefix: partner.honorific } : {}),
+      jobTitle: partner.role,
       worksFor: { "@id": `${SITE_URL}/#organization` },
-      knowsAbout: person.knowsAbout,
-      sameAs: absoluteUrl("/about"),
+      alumniOf: partner.schemaPerson.alumniOf.map((name) => ({
+        "@type": "CollegeOrUniversity",
+        name,
+      })),
+      memberOf: partner.schemaPerson.memberOf.map((name) => ({
+        "@type": "Organization",
+        name,
+      })),
+      knowsAbout: partner.schemaPerson.knowsAbout,
+      workLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "New Delhi",
+          addressRegion: "Delhi",
+          addressCountry: "IN",
+        },
+      },
     },
   };
 }

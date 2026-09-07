@@ -91,13 +91,22 @@ add adjectives not present in the source.
 
 ## Adding a partner page
 
-Same pattern, in `content/partners/`. Both partner URLs are live today
-showing an interim page (`components/practice/PartnerInterim.tsx`) built from
-the bio paragraph already on `/about`. Add an entry to `partnerContent` in
-`content/partners/index.ts` matching the `PartnerContent` shape in
-`content/partners/types.ts`, keyed by slug (`rajeev-sagar` or
-`sanjeev-sagar`), then rebuild — `app/about/[partner]/page.tsx` switches to
-the full profile automatically.
+Partner profiles are MDX, like Insights posts (see below), not TS content
+objects — the prose is long-form and formatted (bold/italic/links), and
+reusing the same `next-mdx-remote` pipeline avoids re-implementing markdown
+rendering. Drop a new `content/partners/{slug}.mdx` file, keyed by slug
+(`rajeev-sagar` or `sanjeev-sagar`), with frontmatter matching
+`PartnerFrontmatter` in `lib/partners.ts` — `name`, `honorific`, `role`,
+`enrolledNote`, `metaTitle`, `description`, `keywords`, `breadcrumbLabel`,
+`education` (rendered as a `<dl>`, not MDX prose — see `lib/partners.ts` and
+`components/about/PartnerProfileLayout.tsx`), `educationNote`,
+`schemaPerson` (`alumniOf`/`memberOf`/`knowsAbout` for the Person JSON-LD),
+and optionally `directContact`. Mark where the Education section should be
+injected with a literal `<!-- EDUCATION-SLOT -->` line in the body. Then
+rebuild — `app/about/[partner]/page.tsx` switches from the interim page
+(`components/practice/PartnerInterim.tsx`, built from the bio already on
+`/about`) to the full profile automatically. Both partner URLs are live
+today; only slugs with a populated `.mdx` file get the full treatment.
 
 ## Adding an Insights post
 
