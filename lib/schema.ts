@@ -8,6 +8,13 @@ function absoluteUrl(path: string) {
   return path.startsWith("http") ? path : `${SITE_URL}${path}`;
 }
 
+// Frontmatter dates are bare "YYYY-MM-DD" (no time-of-day is meaningful for
+// a publication date). JSON-LD datetime properties expect a timezone, so
+// this stamps the firm's own IST offset rather than leaving it ambiguous.
+function isoDateTime(date: string) {
+  return /^\d{4}-\d{2}-\d{2}$/.test(date) ? `${date}T00:00:00+05:30` : date;
+}
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
@@ -227,8 +234,9 @@ export function blogPostingSchema(post: {
     headline: post.title,
     description: post.description,
     url,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt ?? post.publishedAt,
+    image: `${url}/opengraph-image`,
+    datePublished: isoDateTime(post.publishedAt),
+    dateModified: isoDateTime(post.updatedAt ?? post.publishedAt),
     author: {
       "@type": "Organization",
       name: post.author,

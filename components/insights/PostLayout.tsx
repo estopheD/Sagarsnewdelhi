@@ -156,6 +156,12 @@ export function PostLayout({ post }: { post: InsightPost }) {
             {" · "}
             {post.readingTime}
           </p>
+          {post.updatedAt && (
+            <p className="mt-1 text-xs text-ink-muted">
+              Last reviewed:{" "}
+              <time dateTime={post.updatedAt}>{formatDate(post.updatedAt)}</time>
+            </p>
+          )}
         </header>
 
         {hasToc ? (

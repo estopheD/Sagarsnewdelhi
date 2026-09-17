@@ -58,12 +58,15 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <DisclaimerBanner />
         <Header />
         <main id="main-content" className="flex-1">
           {children}
         </main>
         <Footer />
+        {/* Fixed-position overlay: placed after main content in source order
+            so crawlers and AI-answer extraction reach the article text first;
+            `fixed` positioning means this has no effect on where it paints. */}
+        <DisclaimerBanner />
       </body>
     </html>
   );
