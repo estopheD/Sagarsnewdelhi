@@ -35,6 +35,13 @@ export type InsightFrontmatter = {
   keywords?: string[];
   faqs?: InsightFaq[];
   priority?: number; // sitemap priority; defaults to 0.5
+  // Heading level the sidebar table of contents is built from. Defaults to 3
+  // (the long-form-reference convention); set to 2 for a post whose numbered
+  // sections are h2s.
+  tocLevel?: 2 | 3;
+  // Declared word count for BlogPosting schema, for posts whose body contains
+  // raw HTML (e.g. a semantic table) that inflates the automatic count.
+  wordCount?: number;
   placeholder?: boolean;
   // Opt-in highlighted contact block rendered after the FAQ, for posts
   // meant to convert a specific reader intent (e.g. family law enquiries)
@@ -105,10 +112,10 @@ function excerptFor(content: string): string {
 // document order with a fresh slugger instance (matching rehype-slug's
 // per-document dedupe behaviour), so an id computed here always matches the
 // id actually present in the rendered HTML.
-function extractHeadings(content: string): TocItem[] {
+function extractHeadings(content: string, level: 2 | 3 = 3): TocItem[] {
   const slugger = new GithubSlugger();
   const headings: TocItem[] = [];
-  const headingLine = /^###\s+(.+)$/gm;
+  const headingLine = new RegExp(`^${"#".repeat(level)}\\s+(.+)$`, "gm");
   let match: RegExpExecArray | null;
   while ((match = headingLine.exec(content)) !== null) {
     const title = match[1].replace(/[*_`]/g, "").trim();
@@ -146,8 +153,8 @@ export function getInsight(slug: string): InsightPost | null {
     content,
     excerpt: excerptFor(content),
     readingTime: readingTimeFor(content),
-    wordCount: wordCount(content),
-    toc: extractHeadings(content),
+    wordCount: frontmatter.wordCount ?? wordCount(content),
+    toc: extractHeadings(content, frontmatter.tocLevel),
   };
 }
 

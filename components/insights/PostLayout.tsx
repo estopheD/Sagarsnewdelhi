@@ -24,7 +24,7 @@ const mdxOptions = {
 
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => (
-    <h2 className="mt-12 font-serif text-2xl text-ink" {...props} />
+    <h2 className="mt-12 scroll-mt-8 font-serif text-2xl text-ink" {...props} />
   ),
   // Used by long-form reference posts for their numbered top-level
   // sections (e.g. "I. What the Code was built to do"), which is what
@@ -93,12 +93,12 @@ export function PostLayout({ post }: { post: InsightPost }) {
       <MDXRemote source={post.content} components={mdxComponents} options={mdxOptions} />
 
       {post.faqs && post.faqs.length > 0 && (
-        <div className="mt-14">
+        <section className="mt-14">
           <h2 className="font-serif text-2xl text-ink">FAQ</h2>
           <div className="mt-6">
             <FaqAccordion items={post.faqs} />
           </div>
-        </div>
+        </section>
       )}
 
       {post.directContact && (

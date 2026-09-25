@@ -227,18 +227,22 @@ export function blogPostingSchema(post: {
   keywords?: string[];
   wordCount?: number;
 }) {
-  const url = absoluteUrl(`/insights/${post.slug}`);
+  // Trailing slash matches how the static export is served (trailingSlash).
+  const url = absoluteUrl(`/insights/${post.slug}/`);
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     url,
-    image: `${url}/opengraph-image`,
+    image: `${url}opengraph-image`,
     datePublished: isoDateTime(post.publishedAt),
     dateModified: isoDateTime(post.updatedAt ?? post.publishedAt),
+    // When the firm itself is the byline, resolve to the site-wide firm node
+    // by @id rather than declaring a second, unlinked Organization.
     author: {
       "@type": "Organization",
+      ...(post.author === firm.name ? { "@id": `${SITE_URL}/#organization` } : {}),
       name: post.author,
       url: SITE_URL,
     },

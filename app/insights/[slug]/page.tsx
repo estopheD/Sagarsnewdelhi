@@ -22,19 +22,29 @@ export async function generateMetadata({
   if (!post) return {};
 
   const metaTitle = post.metaTitle ?? post.title;
+  // A metaTitle that already carries its own " | Brand" suffix is used as-is;
+  // otherwise the firm name is appended.
+  const fullTitle = metaTitle.includes(" | ") ? metaTitle : `${metaTitle} | ${firm.name}`;
+  // Trailing slash: the static export serves (and redirects to) /insights/{slug}/.
+  const canonical = `/insights/${slug}/`;
 
   return {
-    title: `${metaTitle} | ${firm.name}`,
+    title: fullTitle,
     description: post.description,
     keywords: post.keywords,
-    alternates: { canonical: `/insights/${slug}` },
+    alternates: { canonical },
     openGraph: {
       title: metaTitle,
       description: post.description,
-      url: `/insights/${slug}`,
+      url: canonical,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metaTitle,
+      description: post.description,
     },
   };
 }
@@ -66,8 +76,8 @@ export default async function InsightPostPage({
       <JsonLd
         data={breadcrumbListSchema([
           { name: "Home", path: "/" },
-          { name: "Insights", path: "/insights" },
-          { name: post.title, path: `/insights/${slug}` },
+          { name: "Insights", path: "/insights/" },
+          { name: post.title, path: `/insights/${slug}/` },
         ])}
       />
       {post.faqs && post.faqs.length > 0 && <JsonLd data={faqPageSchema(post.faqs)} />}
