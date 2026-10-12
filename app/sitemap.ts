@@ -40,5 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: post.priority ?? 0.5,
   }));
 
-  return [...staticRoutes, ...practiceAreaRoutes, ...partnerRoutes, ...insightRoutes];
+  // The static export is served with trailingSlash and canonicals carry the
+  // slash, so list the canonical form rather than a URL that redirects.
+  return [...staticRoutes, ...practiceAreaRoutes, ...partnerRoutes, ...insightRoutes].map((entry) => ({
+    ...entry,
+    url: entry.url.endsWith("/") ? entry.url : `${entry.url}/`,
+  }));
 }

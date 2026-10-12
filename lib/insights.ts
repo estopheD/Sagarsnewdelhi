@@ -39,6 +39,11 @@ export type InsightFrontmatter = {
   // (the long-form-reference convention); set to 2 for a post whose numbered
   // sections are h2s.
   tocLevel?: 2 | 3;
+  // Opt-in closing enquiry block (highlighted Contact-page link plus the
+  // firm's email), rendered after the FAQ. `disclaimer` is then rendered
+  // beneath it, so the disclaimer is the last thing on the page.
+  enquiry?: { text: string; email: string };
+  disclaimer?: string;
   // Declared word count for BlogPosting schema, for posts whose body contains
   // raw HTML (e.g. a semantic table) that inflates the automatic count.
   wordCount?: number;

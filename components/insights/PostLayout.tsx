@@ -101,6 +101,35 @@ export function PostLayout({ post }: { post: InsightPost }) {
         </section>
       )}
 
+      {post.enquiry && (
+        <aside
+          aria-label="Enquiries"
+          className="mt-10 border border-accent bg-paper-raised px-5 py-5"
+        >
+          <p className="text-xs uppercase tracking-wide text-accent">Enquiries</p>
+          <p className="mt-2 leading-relaxed text-ink">{post.enquiry.text}</p>
+          <p className="mt-4 text-lg">
+            <a
+              href="/contact/"
+              className="font-serif text-accent italic underline decoration-1 underline-offset-4 hover:text-accent-hover"
+            >
+              Contact
+            </a>
+            <span className="text-ink-muted"> · </span>
+            <a
+              href={`mailto:${post.enquiry.email}`}
+              className="text-accent hover:text-accent-hover"
+            >
+              {post.enquiry.email}
+            </a>
+          </p>
+        </aside>
+      )}
+
+      {post.disclaimer && (
+        <p className="mt-8 text-sm italic leading-relaxed text-ink-muted">{post.disclaimer}</p>
+      )}
+
       {post.directContact && (
         <div className="mt-10 border border-accent bg-paper-raised px-4 py-3">
           <p className="text-xs uppercase tracking-wide text-accent">Partner contact</p>
