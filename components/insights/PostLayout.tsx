@@ -85,6 +85,81 @@ const mdxComponents = {
   },
 };
 
+function ContactPanel({ panel }: { panel: NonNullable<InsightPost["contactPanel"]> }) {
+  const digits = (n: string) => n.replace(/[^\d]/g, "");
+  return (
+    <section
+      aria-labelledby="contact-panel-heading"
+      className="mt-14 border border-accent bg-paper-raised px-5 py-6 sm:px-8"
+    >
+      <h2
+        id="contact-panel-heading"
+        className="scroll-mt-8 font-serif text-2xl text-ink"
+      >
+        {panel.heading}
+      </h2>
+      <p className="mt-3 leading-relaxed text-ink">{panel.text}</p>
+
+      <p className="mt-6 text-xs uppercase tracking-wide text-accent">Telephone</p>
+      <a
+        href={`tel:+${digits(panel.phone)}`}
+        className="mt-1 block font-serif text-4xl leading-tight text-ink hover:text-accent sm:text-5xl"
+      >
+        {panel.phone}
+      </a>
+      <p className="mt-2 text-sm">
+        <a
+          href={`https://wa.me/${digits(panel.phone)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-2 hover:text-accent-hover"
+        >
+          WhatsApp
+        </a>
+      </p>
+
+      <dl className="mt-6 space-y-2 text-sm">
+        <div className="sm:flex sm:gap-x-4">
+          <dt className="text-ink-muted sm:w-24 sm:shrink-0">Email</dt>
+          <dd>
+            <a href={`mailto:${panel.email}`} className="text-accent hover:text-accent-hover">
+              {panel.email}
+            </a>
+          </dd>
+        </div>
+        <div className="sm:flex sm:gap-x-4">
+          <dt className="text-ink-muted sm:w-24 sm:shrink-0">Office</dt>
+          <dd>
+            <a
+              href={`tel:+${digits(panel.landline)}`}
+              className="text-accent hover:text-accent-hover"
+            >
+              {panel.landline}
+            </a>
+          </dd>
+        </div>
+        <div className="sm:flex sm:gap-x-4">
+          <dt className="text-ink-muted sm:w-24 sm:shrink-0">Address</dt>
+          <dd className="text-ink">
+            <strong className="font-normal">{panel.firm}</strong>
+            <br />
+            {panel.address}
+          </dd>
+        </div>
+      </dl>
+
+      <p className="mt-6">
+        <a
+          href="/contact/"
+          className="font-serif text-lg text-accent italic underline decoration-1 underline-offset-4 hover:text-accent-hover"
+        >
+          Contact the firm
+        </a>
+      </p>
+    </section>
+  );
+}
+
 export function PostLayout({ post }: { post: InsightPost }) {
   const hasToc = post.toc.length > 0;
 
@@ -94,7 +169,9 @@ export function PostLayout({ post }: { post: InsightPost }) {
 
       {post.faqs && post.faqs.length > 0 && (
         <section className="mt-14">
-          <h2 className="font-serif text-2xl text-ink">FAQ</h2>
+          <h2 id="frequently-asked-questions" className="scroll-mt-8 font-serif text-2xl text-ink">
+            Frequently asked questions
+          </h2>
           <div className="mt-6">
             <FaqAccordion items={post.faqs} />
           </div>
@@ -125,6 +202,8 @@ export function PostLayout({ post }: { post: InsightPost }) {
           </p>
         </aside>
       )}
+
+      {post.contactPanel && <ContactPanel panel={post.contactPanel} />}
 
       {post.disclaimer && (
         <p className="mt-8 text-sm italic leading-relaxed text-ink-muted">{post.disclaimer}</p>

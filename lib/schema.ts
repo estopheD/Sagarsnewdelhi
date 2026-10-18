@@ -226,7 +226,11 @@ export function blogPostingSchema(post: {
   category?: string;
   keywords?: string[];
   wordCount?: number;
+  about?: string[];
+  mentions?: string[];
 }) {
+  const legislation = (names: string[]) =>
+    names.map((name) => ({ "@type": "Legislation", name, legislationJurisdiction: "IN" }));
   // Trailing slash matches how the static export is served (trailingSlash).
   const url = absoluteUrl(`/insights/${post.slug}/`);
   return {
@@ -234,6 +238,7 @@ export function blogPostingSchema(post: {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
+    inLanguage: "en-IN",
     url,
     image: `${url}opengraph-image`,
     datePublished: isoDateTime(post.publishedAt),
@@ -256,5 +261,7 @@ export function blogPostingSchema(post: {
     ...(post.category ? { articleSection: post.category } : {}),
     ...(post.keywords ? { keywords: post.keywords.join(", ") } : {}),
     ...(post.wordCount ? { wordCount: post.wordCount } : {}),
+    ...(post.about?.length ? { about: legislation(post.about) } : {}),
+    ...(post.mentions?.length ? { mentions: legislation(post.mentions) } : {}),
   };
 }

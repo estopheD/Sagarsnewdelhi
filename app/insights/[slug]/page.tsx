@@ -22,6 +22,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   const metaTitle = post.metaTitle ?? post.title;
+  const socialTitle = post.ogTitle ?? metaTitle;
   // A metaTitle that already carries its own " | Brand" suffix is used as-is;
   // otherwise the firm name is appended.
   const fullTitle = metaTitle.includes(" | ") ? metaTitle : `${metaTitle} | ${firm.name}`;
@@ -33,8 +34,18 @@ export async function generateMetadata({
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+      },
+    },
     openGraph: {
-      title: metaTitle,
+      title: socialTitle,
       description: post.description,
       url: canonical,
       type: "article",
@@ -43,7 +54,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: metaTitle,
+      title: socialTitle,
       description: post.description,
     },
   };
@@ -71,6 +82,8 @@ export default async function InsightPostPage({
           category: post.category,
           keywords: post.keywords,
           wordCount: post.wordCount,
+          about: post.aboutLegislation,
+          mentions: post.mentionsLegislation,
         })}
       />
       <JsonLd

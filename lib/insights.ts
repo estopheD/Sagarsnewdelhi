@@ -43,6 +43,22 @@ export type InsightFrontmatter = {
   // firm's email), rendered after the FAQ. `disclaimer` is then rendered
   // beneath it, so the disclaimer is the last thing on the page.
   enquiry?: { text: string; email: string };
+  // Social-card title where it should differ from the <title> tag.
+  ogTitle?: string;
+  // Legislation named in BlogPosting `about` / `mentions` (entity signals).
+  aboutLegislation?: string[];
+  mentionsLegislation?: string[];
+  // Closing contact panel: the phone number is the dominant element; the
+  // tel:, wa.me and landline tel: links are derived from the displayed numbers.
+  contactPanel?: {
+    heading: string;
+    text: string;
+    firm: string;
+    address: string;
+    phone: string;
+    landline: string;
+    email: string;
+  };
   disclaimer?: string;
   // Declared word count for BlogPosting schema, for posts whose body contains
   // raw HTML (e.g. a semantic table) that inflates the automatic count.
@@ -92,7 +108,13 @@ function excerptFor(content: string): string {
   const firstParagraph = content
     .split(/\n\s*\n/)
     .map((block) => block.trim())
-    .find((block) => block.length > 0 && !block.startsWith("#") && !block.startsWith(">"));
+    .find(
+      (block) =>
+        block.length > 0 &&
+        !block.startsWith("#") &&
+        !block.startsWith(">") &&
+        !block.startsWith("<")
+    );
 
   if (!firstParagraph) return "";
 
