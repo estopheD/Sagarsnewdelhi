@@ -228,6 +228,7 @@ export function blogPostingSchema(post: {
   wordCount?: number;
   about?: string[];
   mentions?: string[];
+  mentionsService?: { name: string; areaServed: string[] };
 }) {
   const legislation = (names: string[]) =>
     names.map((name) => ({ "@type": "Legislation", name, legislationJurisdiction: "IN" }));
@@ -262,6 +263,53 @@ export function blogPostingSchema(post: {
     ...(post.keywords ? { keywords: post.keywords.join(", ") } : {}),
     ...(post.wordCount ? { wordCount: post.wordCount } : {}),
     ...(post.about?.length ? { about: legislation(post.about) } : {}),
-    ...(post.mentions?.length ? { mentions: legislation(post.mentions) } : {}),
+    ...(post.mentions?.length || post.mentionsService
+      ? {
+          mentions: [
+            ...legislation(post.mentions ?? []),
+            ...(post.mentionsService
+              ? [
+                  {
+                    "@type": "Service",
+                    name: post.mentionsService.name,
+                    provider: { "@id": `${SITE_URL}/#organization` },
+                    areaServed: post.mentionsService.areaServed,
+                  },
+                ]
+              : []),
+          ],
+        }
+      : {}),
+  };
+}
+
+// One JSON-LD document for an Insights post: BlogPosting + BreadcrumbList +
+// FAQPage as a single @graph, cross-referenced by @id.
+export function insightGraphSchema(
+  post: Parameters<typeof blogPostingSchema>[0],
+  crumbs: { name: string; path: string }[],
+  faqs?: { question: string; answer: string }[]
+) {
+  const url = absoluteUrl(`/insights/${post.slug}/`);
+  const strip = <T extends { "@context"?: string }>(node: T) => {
+    const { "@context": _context, ...rest } = node;
+    void _context;
+    return rest;
+  };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { ...strip(blogPostingSchema(post)), "@id": `${url}#article` },
+      { ...strip(breadcrumbListSchema(crumbs)), "@id": `${url}#breadcrumb` },
+      ...(faqs?.length
+        ? [
+            {
+              ...strip(faqPageSchema(faqs)),
+              "@id": `${url}#faq`,
+              isPartOf: { "@id": `${url}#article` },
+            },
+          ]
+        : []),
+    ],
   };
 }

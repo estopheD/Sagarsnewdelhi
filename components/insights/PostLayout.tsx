@@ -71,101 +71,202 @@ const mdxComponents = {
   // link in every post, though, since those are markdown-syntax links.
   a: ({ href, className, ...props }: React.ComponentProps<"a">) => {
     const isContactLink = href === "/contact" || href === "/contact/";
+    // Underlined by default (colour alone fails WCAG 1.4.1), thickening on
+    // hover, with a visible keyboard focus ring.
+    const linkClass =
+      "text-accent underline decoration-1 underline-offset-[0.15em] hover:decoration-2 hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
     return (
       <a
         href={href}
-        className={
-          isContactLink
-            ? "text-accent italic underline decoration-1 underline-offset-2 hover:text-accent-hover"
-            : "text-accent hover:text-accent-hover"
-        }
+        className={isContactLink ? `${linkClass} italic` : linkClass}
         {...props}
       />
     );
   },
 };
 
-function ContactPanel({ panel }: { panel: NonNullable<InsightPost["contactPanel"]> }) {
-  const digits = (n: string) => n.replace(/[^\d]/g, "");
+const digits = (n: string) => n.replace(/[^\d]/g, "");
+const slugify = (t: string) =>
+  t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
+type Panel = NonNullable<InsightPost["contactPanel"]>;
+
+function ContactButton({ label }: { label: string }) {
+  return (
+    <a
+      href="/contact/"
+      aria-label="Contact Sagar & Sagar Law Offices"
+      className="inline-flex min-h-12 w-full items-center justify-center bg-accent px-8 py-3 text-base font-semibold uppercase tracking-wide text-paper no-underline transition-colors hover:bg-accent-hover focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-ink sm:w-auto"
+    >
+      {label}
+    </a>
+  );
+}
+
+// Second, condensed conversion point placed mid-page from the .mdx source.
+function ContactCondensed({ panel }: { panel: Panel }) {
+  return (
+    <aside
+      aria-label="Direct partner contact"
+      className="mt-10 border border-accent bg-paper-raised px-5 py-5 sm:flex sm:items-center sm:justify-between sm:gap-6"
+    >
+      <div>
+        <p className="text-xs uppercase tracking-wide text-accent">
+          {panel.label ?? "Telephone"}
+        </p>
+        <a
+          href={`tel:+${digits(panel.phone)}`}
+          className="mt-1 block font-serif text-3xl font-bold text-ink hover:text-accent"
+        >
+          {panel.phone}
+        </a>
+      </div>
+      <div className="mt-4 sm:mt-0 sm:shrink-0">
+        <ContactButton label={panel.button ?? "Contact us"} />
+      </div>
+    </aside>
+  );
+}
+
+function ContactPanel({ panel }: { panel: Panel }) {
+  const rich = Boolean(panel.button);
+  const headingId = slugify(panel.heading);
   return (
     <section
-      aria-labelledby="contact-panel-heading"
+      aria-labelledby={headingId}
       className="mt-14 border border-accent bg-paper-raised px-5 py-6 sm:px-8"
     >
-      <h2
-        id="contact-panel-heading"
-        className="scroll-mt-8 font-serif text-2xl text-ink"
-      >
+      <h2 id={headingId} className="scroll-mt-8 font-serif text-2xl text-ink">
         {panel.heading}
       </h2>
       <p className="mt-3 leading-relaxed text-ink">{panel.text}</p>
 
-      <p className="mt-6 text-xs uppercase tracking-wide text-accent">Telephone</p>
+      <p className="mt-6 text-xs uppercase tracking-wide text-accent">
+        {panel.label ?? "Telephone"}
+      </p>
       <a
         href={`tel:+${digits(panel.phone)}`}
-        className="mt-1 block font-serif text-4xl leading-tight text-ink hover:text-accent sm:text-5xl"
+        className={`mt-1 block whitespace-nowrap font-serif text-3xl leading-tight text-ink hover:text-accent sm:text-5xl ${rich ? "font-bold" : ""}`}
       >
         {panel.phone}
       </a>
+      {panel.phoneNote && (
+        <p className="mt-2 text-sm italic text-ink-muted">{panel.phoneNote}</p>
+      )}
       <p className="mt-2 text-sm">
         <a
           href={`https://wa.me/${digits(panel.phone)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent underline underline-offset-2 hover:text-accent-hover"
+          className="text-accent underline decoration-1 underline-offset-[0.15em] hover:decoration-2 hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           WhatsApp
         </a>
       </p>
 
-      <dl className="mt-6 space-y-2 text-sm">
-        <div className="sm:flex sm:gap-x-4">
-          <dt className="text-ink-muted sm:w-24 sm:shrink-0">Email</dt>
-          <dd>
-            <a href={`mailto:${panel.email}`} className="text-accent hover:text-accent-hover">
+      {rich ? (
+        <>
+          <p className="mt-6">
+            <a
+              href={`mailto:${panel.email}`}
+              className="break-words text-xl font-bold text-ink sm:text-2xl underline decoration-1 underline-offset-[0.15em] hover:decoration-2 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
               {panel.email}
             </a>
-          </dd>
-        </div>
-        <div className="sm:flex sm:gap-x-4">
-          <dt className="text-ink-muted sm:w-24 sm:shrink-0">Office</dt>
-          <dd>
-            <a
-              href={`tel:+${digits(panel.landline)}`}
-              className="text-accent hover:text-accent-hover"
-            >
+          </p>
+          <p className="mt-4 text-sm text-ink">
+            <strong className="font-semibold">Office:</strong>{" "}
+            <a href={`tel:+${digits(panel.landline)}`} className="text-accent underline decoration-1 underline-offset-[0.15em] hover:decoration-2 hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
               {panel.landline}
             </a>
-          </dd>
-        </div>
-        <div className="sm:flex sm:gap-x-4">
-          <dt className="text-ink-muted sm:w-24 sm:shrink-0">Address</dt>
-          <dd className="text-ink">
-            <strong className="font-normal">{panel.firm}</strong>
+            {panel.landlineHours ? ` (${panel.landlineHours})` : null}
+          </p>
+          {panel.overseasNote && (
+            <p className="mt-4 text-sm leading-relaxed text-ink">{panel.overseasNote}</p>
+          )}
+          <div className="mt-6">
+            <ContactButton label={panel.button!} />
+          </div>
+          <p className="mt-6 text-sm leading-relaxed text-ink">
+            <strong className="font-semibold">{panel.firm}</strong>
             <br />
             {panel.address}
-          </dd>
-        </div>
-      </dl>
-
-      <p className="mt-6">
-        <a
-          href="/contact/"
-          className="font-serif text-lg text-accent italic underline decoration-1 underline-offset-4 hover:text-accent-hover"
-        >
-          Contact the firm
-        </a>
-      </p>
+          </p>
+          {panel.practiceLink && (
+            <p className="mt-4 text-sm">
+              <a href={panel.practiceLink.href} className="text-accent underline decoration-1 underline-offset-[0.15em] hover:decoration-2 hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                {panel.practiceLink.label}
+              </a>
+            </p>
+          )}
+        </>
+      ) : (
+        <>
+          <dl className="mt-6 space-y-2 text-sm">
+            <div className="sm:flex sm:gap-x-4">
+              <dt className="text-ink-muted sm:w-24 sm:shrink-0">Email</dt>
+              <dd>
+                <a href={`mailto:${panel.email}`} className="text-accent hover:text-accent-hover">
+                  {panel.email}
+                </a>
+              </dd>
+            </div>
+            <div className="sm:flex sm:gap-x-4">
+              <dt className="text-ink-muted sm:w-24 sm:shrink-0">Office</dt>
+              <dd>
+                <a
+                  href={`tel:+${digits(panel.landline)}`}
+                  className="text-accent hover:text-accent-hover"
+                >
+                  {panel.landline}
+                </a>
+              </dd>
+            </div>
+            <div className="sm:flex sm:gap-x-4">
+              <dt className="text-ink-muted sm:w-24 sm:shrink-0">Address</dt>
+              <dd className="text-ink">
+                <strong className="font-normal">{panel.firm}</strong>
+                <br />
+                {panel.address}
+              </dd>
+            </div>
+          </dl>
+          <p className="mt-6">
+            <a
+              href="/contact/"
+              className="font-serif text-lg text-accent italic underline decoration-1 underline-offset-4 hover:text-accent-hover"
+            >
+              Contact the firm
+            </a>
+          </p>
+        </>
+      )}
     </section>
   );
 }
 
 export function PostLayout({ post }: { post: InsightPost }) {
   const hasToc = post.toc.length > 0;
+  // The FAQ and closing contact panel are rendered by this component rather
+  // than from the .mdx source, so they are appended to the contents list.
+  const tocItems = [
+    ...post.toc,
+    ...(hasToc && post.faqs?.length
+      ? [{ id: "frequently-asked-questions", title: "Frequently asked questions" }]
+      : []),
+    ...(hasToc && post.contactPanel
+      ? [{ id: slugify(post.contactPanel.heading), title: post.contactPanel.heading }]
+      : []),
+  ];
+  const bodyComponents = {
+    ...mdxComponents,
+    ContactCondensed: () =>
+      post.contactPanel?.button ? <ContactCondensed panel={post.contactPanel} /> : null,
+  };
 
   const body = (
     <div className="prose-measure">
-      <MDXRemote source={post.content} components={mdxComponents} options={mdxOptions} />
+      <MDXRemote source={post.content} components={bodyComponents} options={mdxOptions} />
 
       {post.faqs && post.faqs.length > 0 && (
         <section className="mt-14">
@@ -258,6 +359,7 @@ export function PostLayout({ post }: { post: InsightPost }) {
             {post.title}
           </h1>
           <p className="mt-4 text-xs uppercase tracking-wide text-ink-muted">
+            Published{" "}
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             {" · "}
             {post.author}
@@ -274,7 +376,7 @@ export function PostLayout({ post }: { post: InsightPost }) {
 
         {hasToc ? (
           <div className="mt-10 lg:grid lg:grid-cols-[240px_1fr] lg:items-start lg:gap-12">
-            <TableOfContents items={post.toc} />
+            <TableOfContents items={tocItems} />
             {body}
           </div>
         ) : (

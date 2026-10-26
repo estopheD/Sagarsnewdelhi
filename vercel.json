@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/international-services-lpo", "destination": "/lpo/", "permanent": true },
+    { "source": "/international-services-lpo/", "destination": "/lpo/", "permanent": true }
+  ]
+}

@@ -58,7 +58,20 @@ export type InsightFrontmatter = {
     phone: string;
     landline: string;
     email: string;
+    // Optional extras. When `button` is set the panel renders its call to
+    // action as a solid button (and a larger email) instead of a text link.
+    label?: string;
+    phoneNote?: string;
+    landlineHours?: string;
+    overseasNote?: string;
+    button?: string;
+    practiceLink?: { label: string; href: string };
   };
+  // A service the post is about, emitted under BlogPosting `mentions`.
+  mentionsService?: { name: string; areaServed: string[] };
+  // Practice-area slugs whose "Related Insights" block should list this post
+  // even where the body text does not link to that page.
+  relatedPracticeAreas?: string[];
   disclaimer?: string;
   // Declared word count for BlogPosting schema, for posts whose body contains
   // raw HTML (e.g. a semantic table) that inflates the automatic count.
@@ -189,12 +202,19 @@ export function getInsight(slug: string): InsightPost | null {
 // "Related Insights" block. A link, not a mention, is required — this only
 // matches actual markdown link targets. Used for both /practice-areas/{slug}
 // and other standing pages (e.g. /lpo) that anchor an Insights cluster.
-export function getInsightsLinkingTo(targetPath: string): InsightSummary[] {
+export function getInsightsLinkingTo(
+  targetPath: string,
+  alsoIf?: (frontmatter: InsightFrontmatter) => boolean
+): InsightSummary[] {
   return readSlugs()
     .filter((postSlug) => {
       const raw = fs.readFileSync(path.join(INSIGHTS_DIR, `${postSlug}.mdx`), "utf8");
-      const { content } = matter(raw);
-      return content.includes(`](${targetPath}/`) || content.includes(`](${targetPath})`);
+      const { data, content } = matter(raw);
+      return (
+        content.includes(`](${targetPath}/`) ||
+        content.includes(`](${targetPath})`) ||
+        (alsoIf?.(data as InsightFrontmatter) ?? false)
+      );
     })
     .map((postSlug) => {
       const raw = fs.readFileSync(path.join(INSIGHTS_DIR, `${postSlug}.mdx`), "utf8");
@@ -212,5 +232,7 @@ export function getInsightsLinkingTo(targetPath: string): InsightSummary[] {
 }
 
 export function getInsightsLinkingToPracticeArea(slug: string): InsightSummary[] {
-  return getInsightsLinkingTo(`/practice-areas/${slug}`);
+  return getInsightsLinkingTo(`/practice-areas/${slug}`, (fm) =>
+    Boolean(fm.relatedPracticeAreas?.includes(slug))
+  );
 }

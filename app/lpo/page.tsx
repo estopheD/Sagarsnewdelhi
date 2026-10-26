@@ -188,6 +188,14 @@ export default function LpoPage() {
               </li>
             ))}
           </ul>
+          <p className="prose-measure mt-6 text-sm leading-relaxed">
+            <Link
+              href="/insights/legal-process-outsourcing-india-governance-supervision"
+              className="text-accent underline decoration-1 underline-offset-[0.15em] hover:decoration-2 hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              How we govern an offshore engagement — scope, supervision and verification.
+            </Link>
+          </p>
         </section>
 
         <SectionRule className="my-14" />

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PostLayout } from "@/components/insights/PostLayout";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { getAllInsights, getInsight } from "@/lib/insights";
-import { blogPostingSchema, breadcrumbListSchema, faqPageSchema } from "@/lib/schema";
+import { insightGraphSchema } from "@/lib/schema";
 import { firm } from "@/content/site";
 
 type Params = { slug: string };
@@ -33,7 +33,7 @@ export async function generateMetadata({
     title: fullTitle,
     description: post.description,
     keywords: post.keywords,
-    alternates: { canonical },
+    alternates: { canonical, languages: { "en-IN": canonical } },
     robots: {
       index: true,
       follow: true,
@@ -72,28 +72,29 @@ export default async function InsightPostPage({
   return (
     <>
       <JsonLd
-        data={blogPostingSchema({
-          title: post.title,
-          description: post.description,
-          slug: post.slug,
-          publishedAt: post.publishedAt,
-          updatedAt: post.updatedAt,
-          author: post.author,
-          category: post.category,
-          keywords: post.keywords,
-          wordCount: post.wordCount,
-          about: post.aboutLegislation,
-          mentions: post.mentionsLegislation,
-        })}
+        data={insightGraphSchema(
+          {
+            title: post.title,
+            description: post.description,
+            slug: post.slug,
+            publishedAt: post.publishedAt,
+            updatedAt: post.updatedAt,
+            author: post.author,
+            category: post.category,
+            keywords: post.keywords,
+            wordCount: post.wordCount,
+            about: post.aboutLegislation,
+            mentions: post.mentionsLegislation,
+            mentionsService: post.mentionsService,
+          },
+          [
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/insights/" },
+            { name: post.title, path: `/insights/${slug}/` },
+          ],
+          post.faqs
+        )}
       />
-      <JsonLd
-        data={breadcrumbListSchema([
-          { name: "Home", path: "/" },
-          { name: "Insights", path: "/insights/" },
-          { name: post.title, path: `/insights/${slug}/` },
-        ])}
-      />
-      {post.faqs && post.faqs.length > 0 && <JsonLd data={faqPageSchema(post.faqs)} />}
       <PostLayout post={post} />
     </>
   );
